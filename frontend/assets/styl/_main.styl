@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+body
+  overflow-x: hidden
+
+ul,
+nav
+  list-style: none
+  padding: 0
+  margin: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  padding: 0
+  margin: 0
+  font-weight: 600
+
+a
+  opacity: 1
+  &:hover,
+  &:active,
+  &:focus
+    opacity: .9
+    text-decoration: none
+    outline: none
+
+p
+  padding: 0
+  margin: 0
+
+.title
+  &-br
+    position: relative
+    text-align: center
+    margin-bottom: 2rem
+    & h2
+      display: inline-block
+      padding: 0 1.5rem
+      background: #fff
+      position: relative
+      z-index: 10
+      & + hr
+        position: absolute
+        width: 100%
+        top: -.4rem
+        left: 0
+        z-index: 5
+
+.icon
+  &-blue
+    color: #0079c2
+
+  &-gray
+    color: gray
+
+  &-black
+    color: rgba(51, 51, 51, .5)
+
+
+.text
+  &-center
+    text-align: center
+
+  &-right
+    text-align: right
+
+  &-input
+    display: inline-block
+    position: relative
+
+  &-warn
+    display: inline-block
+    text-align: center
+    border: .2rem solid #fff
+    border-radius: 50%
+    width: 3.7rem
+    height: 3.7rem
+    margin-right: 2rem
+
+  &-gerb
+    background: url(../img/gerb.png) no-repeat left center
+    background-size: 5rem
+    padding-left: 7rem
+    margin: 2rem 0
+
+  &-circle-blue
+      display: inline-block
+      width: 12rem
+      height: 12rem
+      border-radius: 50%
+      background: #fff
+      border: .5rem solid #0079c2
+
+  &-circle-25
+    border-right-color: #b7b5b5
+    border-bottom-color: #b7b5b5
+    border-left-color: #b7b5b5
+    transform: rotate(-45deg)
+    & *
+      transform: rotate(45deg)
+
+  &-circle-75
+    border-right-color: #b7b5b5
+    transform: rotate(-45deg)
+    & *
+      transform: rotate(45deg)
+
+.pos-r
+  position: relative
+
+.arrow
+  &-next-step
+    width: 100%
+    position: relative
+    top: 3.5rem
+    left: 0
+
+.input
+  &-icon
+    padding: .6rem 0
+    padding-left: 3rem
+    & + i.fa
+      left: .5rem
+      position: absolute
+      &-mobile
+        top: .2rem
+        font-size: 3rem
+      &-user
+        top: .4rem
+        font-size: 2.5rem
+      &-envelope
+        top: .7rem
+        font-size: 2rem
+
+.textarea
+  resize: vertical
+
+.dropzone
+  border: .2rem dashed #0087F7
+  border-radius: .4rem
+  background: #fff
+  & .dz-error-message,
+  & .dz-success-mark,
+  & .dz-error-mark
+    display: none
+
+.section
+  position: relative
+
+  &__overlay
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: #000
+    opacity: .7
+
+  &__arrow-white
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: url(../img/arrow-white.png) no-repeat center
+
+  &__services
+    background: #fbfbfb
+    margin-top: .5rem
+    display: none

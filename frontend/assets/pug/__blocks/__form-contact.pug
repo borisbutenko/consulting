@@ -1,0 +1,32 @@
+section.section.section__contact
+	.section__overlay
+	//.section__arrow-white
+	.container
+		.row
+			.col-md-8.col-sm-8.col-xs-12.col-md-offset-2.col-sm-offset-2
+				h2
+					span.text-warn !
+					| Спросить быстрее, чем искать.
+				p Оставьте заявку и получите бесплатную консультацию сейчас!
+			form.col-md-8.col-sm-8.col-xs-12.col-md-offset-2.col-sm-offset-2
+				.row
+					.col-md-4.col-sm-4.col-xs-12
+						span.text-input.form-group
+							input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+							+icon('fa-user icon-gray')
+					.col-md-4.col-sm-4.col-xs-12
+						span.text-input.form-group
+							input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+							+icon('fa-mobile icon-gray')
+					.col-md-4.col-sm-4.col-xs-12
+						span.text-input.form-group
+							input.form-control.input.input-icon(type='email' name='email' placeholder='Ваш E-mail')
+							+icon('fa-envelope icon-gray')
+				.row
+					.col-md-8.col-sm-8.col-xs-12
+						textarea.form-control.textarea(name='text' placeholder='Ваше сообщение' rows='6')
+					.col-md-4.col-sm-4.col-xs-12
+						#dropzone.dropzone(action='/file-upload')
+						button.btn.btn-primary(type='submit') ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+			.col-md-8.col-sm-8.col-xs-12.col-md-offset-2.col-sm-offset-2
+				p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.

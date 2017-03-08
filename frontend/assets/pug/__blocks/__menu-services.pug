@@ -1,0 +1,12 @@
+section.section.section__services
+	.container
+		.row
+			.col-md-12.col-sm-12.col-xs-12
+				ul.services
+					- var n = 0
+					while n < 15
+						- var text = 'Services - ' + n++
+						li.services__item
+							a.services__link(href='#0')
+								+icon('fa-users icon-blue')
+								span= text

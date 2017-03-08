@@ -1,0 +1,14 @@
+section.section.section__partners
+	.container
+		.row
+			.col-md-12.col-sm-12.col-xs-12
+				.title-br
+					h2 НАМ ДОВЕРЯЮТ
+					hr
+				- var n = 0
+				ul.partners
+					while n < 30
+						li.partners__item
+							a.partners__link(href='#0')
+								img(src='assets/img/partner.png' alt='')
+						- n++

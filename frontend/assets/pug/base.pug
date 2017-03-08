@@ -1,0 +1,17 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+    title Consulting
+    include __assets/styles
+    include __assets/scripts
+  body
+    include mixins
+    include __blocks/__header
+    include __blocks/__menu-services
+    main.main
+      block main
+    include __blocks/__footer
