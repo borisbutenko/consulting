@@ -1,2 +1,63 @@
 extends ../base
 block main
+	section.section.section__catalog
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					- var n = 1
+					ul.categories
+						while n < 16
+							- var name = 'Категория - ' + n++
+							li.categories__item
+								a.categories__link(href='#0')
+									+icon('fa-book icon-blue')
+									= name
+								- var i = 1
+								ul.categories-body.pos-r
+									while i < 7
+										- var value = 'Услуга - ' + i++
+										li.categories-body__item
+											a.categories-body__link(href='#0')
+												+icon('fa-certificate icon-gray')
+												= value
+									a.categories__link-all(href='#0') Все вопросы
+										+icon('fa-arrow-right icon-blue')
+					- var n = 16
+					ul.categories.categories-hidden(hidden)
+						while n < 31
+							- var name = 'Категория - ' + n++
+							li.categories__item
+								a.categories__link(href='#0')
+									+icon('fa-book icon-blue')
+									= name
+								- var i = 1
+								ul.categories-body.pos-r
+									while i < 7
+										- var value = 'Услуга - ' + i++
+										li.categories-body__item
+											a.categories-body__link(href='#0')
+												+icon('fa-certificate icon-gray')
+												= value
+				.col-md-12.col-sm-12.col-xs-12
+					button#show-categories(type='button')
+						+icon('fa-plus-square-o icon-gray')
+						| Ещё категории
+	section.section.section__callback
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+			.row
+				.col-md-4.col-sm-6.col-xs-12.col-md-offset-2
+					span.text-input.form-group
+						input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+						+icon('fa-user icon-gray')
+				.col-md-4.col-sm-6.col-xs-12
+					span.text-input.form-group
+						input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+						+icon('fa-mobile icon-gray')
+			.row
+				.col-md-6.col-sm-6.col-xs-12.col-md-offset-2
+					p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+				.col-md-2.col-sm-6.col-xs-12
+					button.btn.btn-primary(type='submit') ОТПРАВИТЬ

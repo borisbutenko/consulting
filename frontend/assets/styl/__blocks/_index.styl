@@ -1,0 +1,114 @@
+.section
+  &__catalog
+    padding: 4rem 0
+    & .categories
+      position: relative
+      &__item
+        display: inline-block
+        width: 16%
+        border: .1rem solid #b7b5b5
+        margin: 2rem
+        background-image: linear-gradient(to top, #f7f7f7, transparent)
+        &:hover
+          position: absolute
+          left: 0
+          width: 96%
+          z-index: 100
+          background: #0079c2
+          & a
+            width: 18rem
+            background: rgb(67, 169, 230)
+            text-align: left
+            color: #fff
+            & i.fa
+              text-align: left
+              color: #fff
+            & + ul
+              display: inline-block
+        @media (max-width: 1200px)
+          width: 15%
+        @media (max-width: 992px)
+          width: 19%
+        @media (max-width: 768px)
+          width: 27%
+        @media (max-width: 714px)
+          width: 26%
+        @media (max-width: 623px)
+          width: 25%
+        @media (max-width: 554px)
+          width: 40%
+        @media (max-width: 464px)
+          width: 90%
+      &__link
+        padding: 2rem
+        display: block
+        color: #333
+        text-align: center
+        & i.fa
+          display: block
+          text-align: center
+          font-size: 4rem
+          margin-bottom: 1rem
+        &-all
+          display: inline-block
+          position: absolute
+          bottom: 0
+          right: 0
+          width: 11.5rem !important
+          padding: .2rem
+          padding-left: .5rem
+          background: #005182 !important
+          & i.fa
+            background: #ffffff
+            position: absolute
+            top: 0
+            right: -.1rem
+            line-height: 2.5rem
+            padding: 0 .3rem
+            color: #0079c2 !important
+      &-body
+        padding-top: .5rem
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        display: none
+        padding-left: 25rem
+        @media (max-width: 500px)
+          display: none !important
+        &__item
+          display: inline-block
+          width: 45%
+          margin: .5rem 0
+        &__link
+          padding: .5rem
+          background: #0079c2 !important
+          & i.fa
+            margin-right: 1rem
+          &:hover
+            background: rgba(54, 103, 132, .5) !important
+    & button#show-categories
+      display: block
+      width: 95%
+      margin-left: 2%
+      margin-top: 2rem
+      padding: .5rem
+      & i.fa
+        margin-right: .5rem
+
+  &__callback
+    padding: 4rem 0
+    background: rgba(239, 239, 239, .5)
+    & h2
+      padding: 0 4rem
+      text-transform: uppercase
+      line-height: 4rem
+      margin-bottom: 2rem
+    & .form-group
+      width: 100%
+      & .form-control
+        width: 100%
+    & .btn
+      width: 100%
+      margin-top: 2rem

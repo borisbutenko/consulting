@@ -42,6 +42,53 @@
             });
         }());
 
+        /**
+         * Show fixed buttons
+         */
+        (function($) {
+
+            var callback$ = $('#callback-button'),
+                toTop$    = $('#top-button');
+
+            $(window).scroll(function () {
+                showBtn();
+            });
+
+            showBtn();
+
+            function showBtn() {
+                if ( $('body').scrollTop()  > 500) {
+                    callback$.addClass('active');
+                    toTop$.addClass('active');
+                }
+                else {
+                    callback$.removeClass('active');
+                    toTop$.removeClass('active');
+                }
+            }
+
+        })($);
+
+        /**
+         * Scroll top
+         */
+        (function() {
+            var btn$ = $('#top-button');
+
+            btn$.on('click', function() {
+                $('html, body').animate( { scrollTop: 0 }, 1000);
+            });
+        })();
+
+        /**
+         * Show categories
+         */
+        (function() {
+            $('#show-categories').on('click', function() {
+                $('.categories-hidden').slideToggle(300);
+            })
+        })();
+
     });
 
 })(jQuery);

@@ -32,7 +32,7 @@
             <div class="header__right">
               <p class="clearfix"><span class="pull-right hidden-sm hidden-xs"><i class="fa fa-clock-o icon-blue" aria-hidden="true"></i>с 9:00 до 24:00</span><span class="pull-right"><i class="fa fa-phone icon-blue" aria-hidden="true"></i>+7 (999) 999-99-99</span></p>
               <p class="clearfix"><span class="pull-right hidden-sm hidden-xs"><i class="fa fa-map-marker icon-blue" aria-hidden="true"></i>Адрес</span><span class="pull-right"><i class="fa fa-headphones icon-gray" aria-hidden="true"></i>
-                  <button class="btn btn-default" type="button">Обратная связь</button></span></p>
+                  <button class="btn btn-default" type="button" data-toggle="modal" data-target="#callback">Обратная связь</button></span></p>
             </div>
           </div>
         </div>
@@ -64,6 +64,345 @@
       </div>
     </section>
     <main class="main">
+      <section class="section section__catalog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <ul class="categories">
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 1</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 2</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 3</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 4</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 5</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 6</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 7</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 8</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 9</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 10</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 11</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 12</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 13</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 14</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 15</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li><a class="categories__link-all" href="#0">Все вопросы<i class="fa fa-arrow-right icon-blue" aria-hidden="true"></i></a>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="categories categories-hidden" hidden>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 16</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 17</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 18</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 19</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 20</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 21</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 22</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 23</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 24</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 25</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 26</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 27</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 28</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 29</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+                <li class="categories__item"><a class="categories__link" href="#0"><i class="fa fa-book icon-blue" aria-hidden="true"></i>Категория - 30</a>
+                  <ul class="categories-body pos-r">
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 1</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 2</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 3</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 4</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 5</a></li>
+                    <li class="categories-body__item"><a class="categories-body__link" href="#0"><i class="fa fa-certificate icon-gray" aria-hidden="true"></i>Услуга - 6</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <button id="show-categories" type="button"><i class="fa fa-plus-square-o icon-gray" aria-hidden="true"></i>Ещё категории
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section__callback">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <h2>Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-2"><span class="text-input form-group">
+                <input class="form-control input input-icon" type="text" name="name" placeholder="Ваше имя"><i class="fa fa-user icon-gray" aria-hidden="true"></i></span></div>
+            <div class="col-md-4 col-sm-6 col-xs-12"><span class="text-input form-group">
+                <input class="form-control input input-icon" type="phone" name="phone" placeholder="+7 (___) ___ - __ - __"><i class="fa fa-mobile icon-gray" aria-hidden="true"></i></span></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-2">
+              <p class="text-gerb">В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.</p>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+              <button class="btn btn-primary" type="submit">ОТПРАВИТЬ</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <section class="section section__how-work">
@@ -232,7 +571,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
               <p class="text-center"><span class="text-input">
                   <input class="form-control input input-icon" type="phone" name="phone" placeholder="+7 (___) ___ - __ - __"><i class="fa fa-mobile icon-gray" aria-hidden="true"></i></span>
-                <button class="btn btn-primary" type="button">ПЕРЕЗВОНИ МНЕ</button>
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#confirm">ПЕРЕЗВОНИ МНЕ</button>
               </p>
             </div>
           </div>
@@ -276,6 +615,59 @@
           </div>
         </div>
       </section>
-    </footer>
+    </footer><a id="back-button" href="#0" hidden><i class="fa fa-arrow-left icon-gray" aria-hidden="true"></i></a><a id="top-button" href="#0"><i class="fa fa-arrow-up icon-gray" aria-hidden="true"></i></a><a id="callback-button" href="#0" data-toggle="modal" data-target="#callback"><i class="fa fa-phone" aria-hidden="true"></i></a>
+    <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm-title">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header pos-r">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span>Закрыть</span></button>
+            <h4 class="modal-title text-center" id="confirm-title"><i class="fa fa-telegram icon-blue" aria-hidden="true"></i><br>	Заявка принята!
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Ваша заявка успешна отправлена. Специалист компании свяжется с вами.<br><em>Хорошего дня!</em></p>
+          </div>
+          <div class="modal-footer">
+            <section class="section section__social">
+              <div class="social-likes">
+                <div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+                <div class="twitter" title="Поделиться ссылкой в Твиттере">Twitter</div>
+                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+                <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
+                <div class="plusone" title="Поделиться ссылкой в Гугл-плюсе">Google+</div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="callback-title">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header pos-r">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+            <h4 class="modal-title text-center" id="callback-title">Заказать обратный звонок</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12"><span class="text-input form-group">
+                  <input class="form-control input input-icon" type="text" name="name" placeholder="Ваше имя"><i class="fa fa-user icon-gray" aria-hidden="true"></i></span></div>
+              <div class="col-md-6 col-sm-6 col-xs-12"><span class="text-input form-group">
+                  <input class="form-control input input-icon" type="phone" name="phone" placeholder="+7 (___) ___ - __ - __"><i class="fa fa-mobile icon-gray" aria-hidden="true"></i></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <p class="text-gerb">В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.</p>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <button class="btn btn-primary" type="submit">УЗНАТЬ ПОДРОБНЕЕ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

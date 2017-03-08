@@ -35,6 +35,37 @@ p
   padding: 0
   margin: 0
 
+#callback-button
+  position: fixed
+  bottom: 5rem
+  right: -7rem
+  font-size: 5rem
+  background: rgba(0, 121, 194, .8)
+  border-radius: 50%
+  color: #fff
+  width: 7rem
+  height: 7rem
+  line-height: 7.5rem
+  text-align: center
+  z-index: 9999
+  transition: right .3s
+  &.active
+    right: 5rem
+
+#top-button
+  position: fixed
+  bottom: 5rem
+  left: -4rem
+  font-size: 3rem
+  padding: 0 .5rem
+  background: rgb(239, 239, 239)
+  border: .1px solid gray
+  color: #efefef
+  z-index: 9999
+  transition: left .3s
+  &.active
+    left: 5rem
+
 .title
   &-br
     position: relative

@@ -1,0 +1,46 @@
+#confirm.modal.fade(tabindex='-1' role='dialog' aria-labelledby='confirm-title')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header.pos-r
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span Закрыть
+				h4#confirm-title.modal-title.text-center
+					+icon('fa-telegram icon-blue')
+					br
+					|	Заявка принята!
+			.modal-body
+				p.text-center Ваша заявка успешна отправлена. Специалист компании свяжется с вами.
+					br
+					em Хорошего дня!
+			.modal-footer
+				section.section.section__social
+					.social-likes
+						.facebook(title='Поделиться ссылкой на Фейсбуке') Facebook
+						.twitter(title='Поделиться ссылкой в Твиттере') Twitter
+						.vkontakte(title='Поделиться ссылкой во Вконтакте') Вконтакте
+						.odnoklassniki(title='Поделиться ссылкой в Одноклассниках') Одноклассники
+						.plusone(title='Поделиться ссылкой в Гугл-плюсе') Google+
+
+#callback.modal.fade(tabindex='-1' role='dialog' aria-labelledby='callback-title')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header.pos-r
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span &times;
+				h4#callback-title.modal-title.text-center Заказать обратный звонок
+			.modal-body
+				.row
+					.col-md-6.col-sm-6.col-xs-12
+						span.text-input.form-group
+							input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+							+icon('fa-user icon-gray')
+					.col-md-6.col-sm-6.col-xs-12
+						span.text-input.form-group
+							input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+							+icon('fa-mobile icon-gray')
+			.modal-footer
+				.row
+					.col-md-8.col-sm-8.col-xs-12
+						p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+					.col-md-4.col-sm-4.col-xs-12
+						button.btn.btn-primary(type='submit') УЗНАТЬ ПОДРОБНЕЕ
