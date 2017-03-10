@@ -89,6 +89,27 @@
             })
         })();
 
+        /**
+         * Swiper audit
+         */
+        new Swiper('.audit', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            nextButton: '.audit__button-next',
+            prevButton: '.audit__button-prev',
+        });
+
+        /**
+         * Swiper services with
+         */
+        new Swiper('.services-with', {
+            slidesPerView: 5,
+            paginationClickable: true,
+            nextButton: '.services-with__button-next',
+            prevButton: '.services-with__button-prev',
+            spaceBetween: 30
+        });
+
     });
 
 })(jQuery);

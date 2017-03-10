@@ -141,7 +141,8 @@ gulp.task('libs', () => {
         gulp.src(`${libsPath.from}bootstrap.js`),
         gulp.src(`${libsPath.from}social-likes.min.js`),
         gulp.src(`${libsPath.from}jquery.inputmask.bundle.js`),
-        gulp.src(`${libsPath.from}dropzone.js`)
+        gulp.src(`${libsPath.from}dropzone.js`),
+        gulp.src(`${libsPath.from}swiper.js`)
     )
     .pipe(concat('libs.js'))
     .pipe(gulp.dest(libsPath.to))
@@ -185,7 +186,7 @@ gulp.task('fonts', () => {
 /**
  * Compile pug files
  */
-let page = 'index.pug';
+let page = 'audit.pug';
 
 const pugPath = {
     from : [`${dirs.from}pug/__pages/${page}`],

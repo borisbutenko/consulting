@@ -35,6 +35,34 @@ p
   padding: 0
   margin: 0
 
+.main
+  padding: 4rem 0
+  &__title
+    text-align: center
+    & i.fa
+      font-size: 6rem
+
+.aside
+  padding-top: 4rem
+  &__title
+    margin-bottom: 2rem
+    & h3
+      & > i.fa
+        font-size: 2.5rem
+        margin-right: 1rem
+  &__info
+    cursor: pointer
+    padding: 1rem 0
+    background: #f7f7f7
+    text-align: center
+    margin-bottom: 2rem
+    & > span
+      font-weight: 500
+      border-bottom: .1rem dashed
+    & > i.fa
+      margin-left: .5rem
+      font-size: 1.4rem
+
 #callback-button
   position: fixed
   bottom: 5rem
@@ -77,12 +105,20 @@ p
       background: #fff
       position: relative
       z-index: 10
+      & > i.fa
+        margin-left: .5rem
       & + hr
         position: absolute
         width: 100%
         top: -.4rem
         left: 0
         z-index: 5
+
+.mt-4
+  margin-top: 4rem
+
+.mt-8
+  margin-top: 8rem
 
 .icon
   &-blue
@@ -118,8 +154,8 @@ p
   &-gerb
     background: url(../img/gerb.png) no-repeat left center
     background-size: 5rem
+    padding: 2rem 0
     padding-left: 7rem
-    margin: 2rem 0
 
   &-circle-blue
       display: inline-block

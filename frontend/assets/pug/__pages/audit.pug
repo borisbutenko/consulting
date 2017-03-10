@@ -1,0 +1,171 @@
+extends ../base
+block main
+	section.section.section__audit
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.main__title
+						+icon('fa-pencil-square-o icon-blue')
+						.title-br
+							h2 АУДИТ
+							hr
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.swiper-container.audit
+						ul.swiper-wrapper.audit__list(role='tablist')
+							- var n = 0
+								while n < 7
+									- var cl = ''
+									- var href = '#tab-' + n
+									if ( n == 0 )
+										- cl = 'active'
+									else
+										- cl = ''
+									- var name = 'Tab name - ' + n++
+									li.swiper-slide.audit__item(role='presentation' class=cl)
+										a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
+						.swiper-button-prev.audit__button.audit__button-prev
+						.swiper-button-next.audit__button.audit__button-next
+			.row
+				.tab-content
+					- var n = 0
+					while n < 7
+						if ( n == 0 )
+							- cl = 'in active'
+						else
+							- cl = ''
+						- var id = 'tab-' + n
+						- n++
+						aside.aside.aside-audit.tab-pane.fade.clearfix(id=id role='tabpanel' class=cl)
+							.col-md-6.col-sm-6.col-xs-12
+								.aside__left.clearfix
+									.row
+										.aside__title
+											h3
+												+icon('fa-newspaper-o icon-gray')
+												| Что мы для вас делаем - #{n}
+									.row
+										ul#aside-accordion.aside-accordion(role='tablist' aria-multiselectable='true')
+											- var a = 0
+											while a < 10
+												- var val  = 'Услуга - ' + a++
+												- var liId = 'aside-accordion-' + a
+												- var arCr = 'aside-accordion-collapse-' + a
+												li.aside-accordion__item(role='tab' id=liId)
+													+icon('fa-check-circle-o icon-gray')
+													- var href = '#aside-accordion-collapse-' + a
+													a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
+														+icon('fa-arrow-circle-o-down icon-gray')
+													+icon('fa-question-circle-o icon-gray')
+													- var pId  = 'aside-accordion-collapse-' + a
+													- var arLb = 'aside-accordion-' + a
+													p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+										span
+											h5 Стоимость:
+											| от 30 000 руб.
+										span
+											h5 Срок:
+											| 60 - 90 дней
+										.dop
+											span Дополнительные услуги
+											+icon('fa-question-circle-o icon-gray')
+											p Клиент получит:
+												img(src='assets/img/gerb2.png' alt='')
+							.col-md-6.col-sm-6.col-xs-12
+								.aside__right.clearfix
+									.row
+										.col-md-12.col-sm-12.col-xs-12
+											.aside__title
+												h3
+													+icon('fa-newspaper-o icon-gray')
+													| Что потребуется от вас - #{n}
+									.row
+										.col-md-12.col-sm-12.col-xs-12
+											p.aside__info
+												span Сведения и документы, которые нам потребуются
+												+icon('fa-question-circle-o icon-gray')
+										.row
+											.col-md-3.col-sm-3.col-xs-12.text-center(style='margin-left:3%')
+												+icon('fa-headphones icon-black')
+												h5 Позвоните нам
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+											.col-md-3.col-sm-3.col-xs-12.text-center
+												+icon('fa-question-circle-o icon-black')
+												h5 Задайте вопрос
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+											.col-md-3.col-sm-3.col-xs-12.text-center
+												+icon('fa-sticky-note-o icon-black')
+												h5 Получите ответ
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.aside__callback
+											.row
+												.col-md-12.col-sm-12.col-xs-12
+													h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+											.row
+												.col-md-6.col-sm-12.col-xs-12
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+														+icon('fa-user icon-gray')
+												.col-md-6.col-sm-12.col-xs-12
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+														+icon('fa-mobile icon-gray')
+											.row
+												.col-md-8.col-sm-6.col-xs-12
+													p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+												.col-md-4.col-sm-6.col-xs-12
+													button.btn.btn-primary(type='submit') ОТПРАВИТЬ
+			.row.hidden-xs.mt-4
+				.col-md-12.col-sm-12.col-xs-12
+					.title-br
+						h2
+							| КАК БЫСТРО ПРОВЕСТИ РЕСТРУКТУРИЗАЦИЮ?
+							+icon('fa-question-circle-o icon-gray')
+						hr
+			.row.hidden-xs
+				.col-md-12.col-sm-12.col-xs-12.text-center
+					.restuct
+						+icon('fa-files-o icon-gray')
+						p Предоставление копий документов
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-pencil-square-o icon-gray')
+						p Подготовка документов
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-check-circle-o icon-gray')
+						p Заверенные формы у нотариуса
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-credit-card icon-gray')
+						p Оплата услуг
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-truck icon-gray')
+						p Доставка готовых документов
+			.row.mt-8
+				.col-md-12.col-sm-12.col-xs-12
+					.title-br
+						h2 С ЭТОЙ УСЛУГОЙ ЧАСТО ЗАКАЗЫВАЮТ
+						hr
+				.col-md-12.col-sm-12.col-xs-12
+					.swiper-container.services-with
+						ul.swiper-wrapper.services-with__list.categories(role='tablist')
+							- var s = 0
+							while s < 7
+								- var service = 'Service name - ' + s++
+								li.swiper-slide.services-with__item.categories__item
+									a.services-with__link.categories__link(href='#0')
+										+icon('fa-book icon-blue')
+										= service
+						.swiper-button-prev.services-with__button.services-with__button-prev
+						.swiper-button-next.services-with__button.services-with__button-next

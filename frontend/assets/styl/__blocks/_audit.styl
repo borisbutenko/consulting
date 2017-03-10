@@ -1,0 +1,149 @@
+.section
+  &__audit
+    & .tab-content
+      margin-bottom: 4rem
+    & .restuct
+      vertical-align: top
+      margin-top: 2rem
+      width: 10%
+      display: inline-block
+      position: relative
+      text-align: center
+      & i.fa
+        display: block
+        text-align: center
+        font-size: 5rem
+      & p
+        font-size: 1.2rem
+        text-align: center
+        margin-top: 2rem
+      & img
+        width: 5rem
+        position: relative
+        top: 2rem
+    & .categories
+      position: relative
+      &__item
+        background-image: linear-gradient(to top, #f7f7f7, transparent)
+        border: .1rem solid #e1e1e1
+        &:hover
+          background: #0079c2
+          & a
+            color: #fff
+            & i.fa
+              color: #fff
+      &__link
+        padding: 2rem
+        display: block
+        color: #333
+        text-align: center
+        & i.fa
+          display: block
+          text-align: center
+          font-size: 4rem
+          margin-bottom: 1rem
+
+.aside
+  & > *:first-of-type
+    border-right: .1rem solid #c1c1c1
+    padding-right: 5rem
+  & > *:last-of-type
+    padding-left: 5rem
+  &__right
+    & i.fa
+      font-size: 5rem
+    & h5
+      margin: 1rem 0
+      & + p
+        font-size: 1.2rem
+  &__callback
+    padding: 4rem 0
+    & h2
+      font-size: 2rem
+      text-align: center
+      margin-bottom: 2rem
+    & .form-group
+      width: 100%
+      & .input
+        width: 100%
+    & button
+      width: 100%
+      margin-top: 2rem
+
+.audit
+  padding: 0 5rem
+  &__item
+    text-align: center
+    &.active > a
+      background: rgba(0, 121, 194, .8)
+      color: #fff
+  &__link
+    background: #f7f7f7
+    display: block
+    padding: 2rem 0
+    color: #333
+    &:hover
+      background: rgba(0, 121, 194, .8)
+      color: #fff
+  &__button
+    width: 5rem
+    height: 6rem
+    top: 36%
+    &-prev
+      left: 0
+    &-next
+      right: 0
+
+.aside-accordion
+  max-height: 20rem
+  overflow-y: auto
+  &__item
+    padding: 1rem 0
+    & p
+      padding: 0 2rem
+      padding-top: 1rem
+  &__link
+    color: #333
+    display: inline-block
+    margin: 0 1rem
+    &[aria-expanded=true]
+      font-weight: 600
+    &:hover,
+    &:active,
+    &:focus
+      color: #333
+    & i.fa
+      margin-left: 1rem
+  & + p
+    background: #f7f7f7
+    padding: 2rem
+    border: .1rem solid #c1c1c1
+    margin-top: 4rem
+  & ~ span
+    display: inline-block
+    width: 49%
+    background: rgba(153, 153, 153, .3);
+    text-align: center
+    padding: 2rem
+    margin-top: 2rem
+    & h5
+      font-size: 2rem
+    &:first-of-type
+      margin-right: 2%
+    &:last-of-type
+      margin-right: 0
+  & ~ .dop
+    & span
+      cursor: pointer
+      color: rgba(51, 51, 51, .5)
+      border-bottom: .1rem dashed
+      display: inline-block
+      margin: 2rem 0
+      & + i.fa
+        margin-left: .5rem
+    & p
+      font-size: 2rem
+      font-weight: 500
+      & img
+        max-width: 10rem
+        margin-left: 2rem
