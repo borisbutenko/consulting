@@ -185,25 +185,55 @@
     &.active
       & a
         border: .1rem solid #3393ce
-        border-bottom-right-radius: 50rem
-        border-top-right-radius: 50rem
+        border-right: none
         color: #3393ce
+        &::after
+          border-color: rgba(255, 255, 255, 0)
+          border-left-color: #fff
+          border-width: 23px
+          margin-top: -23px
+        &::before
+          border-color: rgba(51, 147, 206, 0);
+          border-left-color: #3393ce;
+          border-width: 24px
+          margin-top: -24px
         & i.fa
           color: #3393ce
   &__link
+    height: 4.8rem
     display: block
-    padding: 1rem 2rem
+    padding: 1.13rem 2rem
     padding-right: 0
     border: .1rem solid transparent
+    border-right: none
     margin: .5rem 0
     margin-right: 2rem
     color: #333
-    transition: all .3s
+    position: relative
+    &::after,
+    &::before
+      left: 100%
+      top: 50%
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
     &:hover
       border: .1rem solid #3393ce
-      border-bottom-right-radius: 50rem
-      border-top-right-radius: 50rem
       color: #3393ce
+      border-right: none
+      &::after
+        border-color: rgba(255, 255, 255, 0)
+        border-left-color: #fff
+        border-width: 2.3rem
+        margin-top: -2.3rem
+      &::before
+        border-color: rgba(51, 147, 206, 0);
+        border-left-color: #3393ce;
+        border-width: 2.4rem
+        margin-top: -2.4rem
       & i.fa
         color: #3393ce
     & i.fa

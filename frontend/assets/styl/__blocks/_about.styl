@@ -1,0 +1,64 @@
+.section
+  &__about
+    & .main__title
+      padding-bottom: 2rem
+    & .title-br
+      & h2
+        font-size: 2rem
+        & + hr
+          top: -1rem
+
+.questionary
+  &__title
+    margin: 1rem 0
+  & label
+    position: relative
+    display: block
+    font-weight: 400
+    &:first-of-type
+      & span:first-child::after
+        display: inline-block
+        content: ""
+        width: 25%
+        position: absolute
+        height: .1rem
+        background: #808080
+        top: 0
+        left: 0
+    & span
+      display: inline-block
+      vertical-align: top
+      &:first-child
+        width: 25%
+        margin-top: .5rem
+        @media (max-width 600px)
+          width: 100%
+          margin: 1rem 0
+      &:last-child
+        width: 70%
+        margin-left: 5%
+        @media (max-width 600px)
+          width: 100%
+          margin: 0
+  &__birthday
+    & span.text-input
+      font-size: 0
+    & select
+      display: inline-block
+      margin-right: 5%
+      padding: 0 .5rem
+      &:first-child
+        width: 20%
+      &:nth-child(2)
+        width: 45%
+      &:last-child
+        width: 25%
+        margin-right: 0
+  &__controls
+    width: 70%
+    & p
+      text-align: right
+      margin-bottom: .5rem
+    & .input
+      padding-bottom: 3.2rem
+      margin-bottom: 1.5rem

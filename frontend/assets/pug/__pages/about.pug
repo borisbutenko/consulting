@@ -1,0 +1,174 @@
+extends ../base
+block main
+	- function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
+	section.section.section__about
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.main__title
+						+icon('fa-home icon-blue')
+						.title-br
+							h2 О НАС
+							hr
+			.row
+				.col-md-3.col-sm-5.col-xs-12
+					ul.tab-list(role='tablist')
+						- var t = 0
+						while t < 7
+							- var cls = ''
+							- var href = '#tab-list-' + t
+							if ( t == 0 )
+								- cls = 'active'
+							else
+								- cls = ''
+							- t++
+							- var name = 'Tab name - ' + t
+							li.tab-list__item(role='presentation' class=cls)
+								a.tab-list__link(href=href aria-controls='home' role='tab' data-toggle='tab')
+									+icon('fa-child icon-gray')
+									= name
+				.col-md-9.col-sm-7.col-xs-12
+					.tab-content
+						- var t = 0
+						while t < 7
+							- var ids = 'tab-list-' + t
+							- var cls = ''
+							if ( t == 0 )
+								- cls = 'in active'
+							else
+								- cls = ''
+							- t++
+							.tab-pane.fade(id=ids role='tabpanel' class=cls)
+								if ( t == 1 )
+									.title-br
+										h2 АНКЕТА СОИСКАТЕЛЯ
+										hr
+									.questionary
+										.row
+											.col-md-6.col-sm-12.col-xs-12
+												h5.questionary__title Личные данные
+												label
+													span Вас зовут
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='text' name='name' placeholder='Фамилия, имя, отчество')
+														+icon('fa-user icon-gray')
+												label
+													span Ваш E-mail
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='email' name='email' placeholder='Ваш E-mail')
+														+icon('fa-envelope icon-gray')
+												label
+													span Телефон
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+														+icon('fa-mobile icon-gray')
+												label.questionary__birthday
+													span Дата рождения
+													span.text-input.form-group
+														select.form-control.select
+															- var i = 1
+															while i <= 31
+																if ( i == 1 )
+																	option(selected)= i
+																else
+																	option= i
+																- i++
+														select.form-control.select
+															- var i = 1
+															while i <= 12
+																- var month = 'Месяц - ' + i
+																if ( i == 1 )
+																	option(selected)= month
+																else
+																	option= month
+																- i++
+														select.form-control.select
+															- var i = 1940
+															while i <= 2010
+																if ( i == 1 )
+																	option(selected)= i
+																else
+																	option= i
+																- i++
+												label
+													span Уровень зарплаты
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name' placeholder='20 000 тыс. руб.')
+												label
+													span Желаемая должность
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name')
+											.col-md-6.col-sm-12.col-xs-12
+												h5.questionary__title Опыт работы
+												label
+													span Организация, подразделение, должность
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' rows='6')
+												h5.questionary__title Образование
+												label
+													span Где вы учились, работали и т.п.
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' rows='6')
+										.row
+											.col-md-6.col-sm-12.col-xs-12
+												h5.questionary__title Прочие сведения
+												label
+													span Гражданство
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name')
+												label
+													span Увлечения, хобби
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name')
+												label
+													span Семейное положение, дети
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name')
+												label
+													span Ближайшее с вами метро
+													span.text-input.form-group
+														input.form-control.input(type='text' name='name')
+												label
+													span Адрес проживания
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' placeholder='Город, улица, дом, кв.' rows='4')
+												label
+													span Сильные стороны Вашей проф. деятельности
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' rows='4')
+											.col-md-6.col-sm-12.col-xs-12
+												h5.questionary__title Дополнительные данные
+												label
+													span Компьютерные навыки
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' placeholder='Назв. компьютерных программ, языки программирования' rows='6')
+												label
+													span Иностранные языки
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' placeholder='Немецкий, Английский, Армянский' rows='6')
+												label
+													span Проф. интересы, цель обращения
+													span.text-input.form-group
+														textarea.form-control.textarea(name='text' rows='6')
+												label.questionary__controls.pull-right.clearfix
+													p Прикрепить резюме
+													input.input.form-control(type='file')
+													button.btn.btn-primary.pull-right(type='button') Отправить анкету
+								else
+									.title-br
+										h2 Tab name - #{t}
+										hr
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									br
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									br
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
