@@ -9789,6 +9789,7 @@ template {
 }
 .section__audit .tab-content {
   margin-bottom: 4rem;
+  padding: 0 2rem;
 }
 .section__audit .restuct {
   vertical-align: top;
@@ -9876,7 +9877,8 @@ template {
   margin-top: 2rem;
 }
 .audit {
-  padding: 0 5rem;
+  position: static;
+  width: 95%;
 }
 .audit__item {
   text-align: center;
@@ -9895,20 +9897,52 @@ template {
   background: rgba(0,121,194,0.8);
   color: #fff;
 }
-.audit__button {
-  width: 5rem;
-  height: 6rem;
-  top: 36%;
-}
 .audit__button-prev {
   left: 0;
 }
 .audit__button-next {
   right: 0;
 }
+.services-with {
+  position: static;
+  width: 95%;
+}
+.services-with__item {
+  text-align: center;
+}
+.services-with__item.active > a {
+  background: rgba(0,121,194,0.8);
+  color: #fff;
+}
+.services-with__link {
+  background: #f7f7f7;
+  display: block;
+  padding: 2rem 0;
+  color: #333;
+}
+.services-with__link:hover {
+  background: rgba(0,121,194,0.8);
+  color: #fff;
+}
+.services-with__button-prev {
+  left: 0;
+}
+.services-with__button-next {
+  right: 0;
+}
 .aside-accordion {
   max-height: 20rem;
   overflow-y: auto;
+}
+.aside-accordion::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.aside-accordion::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0,0,0,0.3);
+}
+.aside-accordion::-webkit-scrollbar-thumb {
+  background-color: #3393ce;
+  outline: 0.1rem solid #708090;
 }
 .aside-accordion__item {
   padding: 1rem 0;
@@ -9946,6 +9980,13 @@ template {
   text-align: center;
   padding: 2rem;
   margin-top: 2rem;
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  .aside-accordion ~ span {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .aside-accordion ~ span h5 {
   font-size: 2rem;
@@ -9973,6 +10014,73 @@ template {
 .aside-accordion ~ .dop p img {
   max-width: 10rem;
   margin-left: 2rem;
+}
+.tab-list__item.active a {
+  border: 0.1rem solid #3393ce;
+  border-bottom-right-radius: 50rem;
+  border-top-right-radius: 50rem;
+  color: #3393ce;
+}
+.tab-list__item.active a i.fa {
+  color: #3393ce;
+}
+.tab-list__link {
+  display: block;
+  padding: 1rem 2rem;
+  padding-right: 0;
+  border: 0.1rem solid transparent;
+  margin: 0.5rem 0;
+  margin-right: 2rem;
+  color: #333;
+  transition: all 0.3s;
+}
+.tab-list__link:hover {
+  border: 0.1rem solid #3393ce;
+  border-bottom-right-radius: 50rem;
+  border-top-right-radius: 50rem;
+  color: #3393ce;
+}
+.tab-list__link:hover i.fa {
+  color: #3393ce;
+}
+.tab-list__link i.fa {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+@media (max-width: 768px) {
+  #accordion {
+    margin-top: 2rem;
+  }
+}
+#accordion [data-parent="#accordion"] {
+  color: #808080;
+  border-bottom: 0.1rem dashed #e1e1e1;
+}
+#accordion [data-parent="#accordion"] i.fa {
+  margin-right: 1rem;
+}
+#accordion [data-parent="#accordion"][aria-expanded=true] {
+  color: #000;
+  border: none;
+}
+#accordion [data-parent="#accordion"][aria-expanded=true] i.fa {
+  color: #000;
+}
+#accordion h4 + p {
+  margin: 2rem 0;
+}
+#accordion .panel ol li {
+  padding-left: 1rem;
+}
+#accordion .panel ol + div {
+  padding-left: 3rem;
+}
+#accordion .panel ol + div a {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+#accordion .panel ol + div a i.fa {
+  margin: 0 0.5rem;
 }
 #confirm .close {
   position: absolute;
@@ -10432,6 +10540,11 @@ p {
 .aside__title {
   margin-bottom: 2rem;
 }
+@media (max-width: 768px) {
+  .aside__title {
+    margin-top: 4rem;
+  }
+}
 .aside__title h3 > i.fa {
   font-size: 2.5rem;
   margin-right: 1rem;
@@ -10511,6 +10624,13 @@ p {
 }
 .mt-8 {
   margin-top: 8rem;
+}
+.btn i.fa {
+  margin-right: 0.5rem;
+}
+.btn-print {
+  background: rgba(51,51,51,0.8);
+  color: #fff;
 }
 .icon-blue {
   color: #0079c2;

@@ -2,6 +2,7 @@
   &__audit
     & .tab-content
       margin-bottom: 4rem
+      padding: 0 2rem
     & .restuct
       vertical-align: top
       margin-top: 2rem
@@ -71,7 +72,8 @@
       margin-top: 2rem
 
 .audit
-  padding: 0 5rem
+  position: static
+  width: 95%
   &__item
     text-align: center
     &.active > a
@@ -86,9 +88,28 @@
       background: rgba(0, 121, 194, .8)
       color: #fff
   &__button
-    width: 5rem
-    height: 6rem
-    top: 36%
+    &-prev
+      left: 0
+    &-next
+      right: 0
+
+.services-with
+  position: static
+  width: 95%
+  &__item
+    text-align: center
+    &.active > a
+      background: rgba(0, 121, 194, .8)
+      color: #fff
+  &__link
+    background: #f7f7f7
+    display: block
+    padding: 2rem 0
+    color: #333
+    &:hover
+      background: rgba(0, 121, 194, .8)
+      color: #fff
+  &__button
     &-prev
       left: 0
     &-next
@@ -97,6 +118,13 @@
 .aside-accordion
   max-height: 20rem
   overflow-y: auto
+  &::-webkit-scrollbar
+    width: .5rem
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 .6rem rgba(0,0,0,.3)
+  &::-webkit-scrollbar-thumb
+    background-color: #3393ce
+    outline: .1rem solid slategrey
   &__item
     padding: 1rem 0
     & p
@@ -126,6 +154,10 @@
     text-align: center
     padding: 2rem
     margin-top: 2rem
+    font-size: 1.8rem
+    @media (max-width: 500px)
+      width: 100%
+      margin-right: 0
     & h5
       font-size: 2rem
     &:first-of-type
@@ -147,3 +179,61 @@
       & img
         max-width: 10rem
         margin-left: 2rem
+
+.tab-list
+  &__item
+    &.active
+      & a
+        border: .1rem solid #3393ce
+        border-bottom-right-radius: 50rem
+        border-top-right-radius: 50rem
+        color: #3393ce
+        & i.fa
+          color: #3393ce
+  &__link
+    display: block
+    padding: 1rem 2rem
+    padding-right: 0
+    border: .1rem solid transparent
+    margin: .5rem 0
+    margin-right: 2rem
+    color: #333
+    transition: all .3s
+    &:hover
+      border: .1rem solid #3393ce
+      border-bottom-right-radius: 50rem
+      border-top-right-radius: 50rem
+      color: #3393ce
+      & i.fa
+        color: #3393ce
+    & i.fa
+      font-size: 2rem
+      margin-right: 1rem
+
+#accordion
+  @media (max-width: 768px)
+    margin-top: 2rem
+  & [data-parent="#accordion"]
+    color: #808080
+    border-bottom: .1rem dashed #e1e1e1
+    & i.fa
+      margin-right: 1rem
+    &[aria-expanded=true]
+      color: #000
+      border: none
+      & i.fa
+        color: #000
+  & h4
+    & + p
+      margin: 2rem 0
+  & .panel
+    & ol
+      & li
+        padding-left: 1rem
+      & + div
+        padding-left: 3rem
+        & a
+          display: inline-block
+          margin-bottom: 1rem
+          & i.fa
+            margin: 0 .5rem

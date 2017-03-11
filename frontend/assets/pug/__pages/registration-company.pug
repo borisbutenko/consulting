@@ -8,23 +8,23 @@ block main
 					.main__title
 						+icon('fa-pencil-square-o icon-blue')
 						.title-br
-							h2 АУДИТ
+							h2 РЕГИСТРАЦИЯ ФИРМ
 							hr
 			.row
 				.col-md-12.col-sm-12.col-xs-12
 					.swiper-container.audit
 						ul.swiper-wrapper.audit__list(role='tablist')
 							- var n = 0
-								while n < 7
-									- var cl = ''
-									- var href = '#tab-' + n
-									if ( n == 0 )
-										- cl = 'active'
-									else
-										- cl = ''
-									- var name = 'Tab name - ' + n++
-									li.swiper-slide.audit__item(role='presentation' class=cl)
-										a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
+							while n < 7
+								- var cl = ''
+								- var href = '#tab-' + n
+								if ( n == 0 )
+									- cl = 'active'
+								else
+									- cl = ''
+								- var name = 'Tab name - ' + n++
+								li.swiper-slide.audit__item(role='presentation' class=cl)
+									a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
 						.swiper-button-prev.audit__button.audit__button-prev
 						.swiper-button-next.audit__button.audit__button-next
 			.row
@@ -126,7 +126,7 @@ block main
 				.col-md-12.col-sm-12.col-xs-12
 					.title-br
 						h2
-							| КАК БЫСТРО ПРОВЕСТИ РЕСТРУКТУРИЗАЦИЮ
+							| КАК БЫСТРО ЗАРЕГИСТРИРОВАТЬ ИП
 							+icon('fa-question-circle-o icon-gray')
 						hr
 			.row.hidden-xs
@@ -184,7 +184,7 @@ block main
 							- t++
 							.tab-pane.fade(id=ids role='tabpanel' class=cls)
 								#accordion.panel-group(role='tablist' aria-multiselectable='true')
-									h4 РЕСТРУКТУРИЗАЦИЯ ФИРМЫ: ОПИСАНИЕ УСЛУГ
+									h4 РЕГИСТРАЦИЯ ИП: ОПИСАНИЕ УСЛУГ
 									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 									- var a = 0
 									while a < 4

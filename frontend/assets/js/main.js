@@ -92,22 +92,80 @@
         /**
          * Swiper audit
          */
-        new Swiper('.audit', {
-            slidesPerView: 4,
-            paginationClickable: true,
-            nextButton: '.audit__button-next',
-            prevButton: '.audit__button-prev',
-        });
+        if ( window.innerWidth <= 600 ) {
+            new Swiper('.audit', {
+                slidesPerView: 2,
+                paginationClickable: true,
+                nextButton: '.audit__button-next',
+                prevButton: '.audit__button-prev',
+            });
+        } else {
+            new Swiper('.audit', {
+                slidesPerView: 4,
+                paginationClickable: true,
+                nextButton: '.audit__button-next',
+                prevButton: '.audit__button-prev',
+            });
+        }
 
         /**
          * Swiper services with
          */
-        new Swiper('.services-with', {
-            slidesPerView: 5,
-            paginationClickable: true,
-            nextButton: '.services-with__button-next',
-            prevButton: '.services-with__button-prev',
-            spaceBetween: 30
+        if ( window.innerWidth <= 600 ) {
+            new Swiper('.services-with', {
+                slidesPerView: 2,
+                paginationClickable: true,
+                nextButton: '.services-with__button-next',
+                prevButton: '.services-with__button-prev',
+                spaceBetween: 30
+            });
+        } else {
+            new Swiper('.services-with', {
+                slidesPerView: 5,
+                paginationClickable: true,
+                nextButton: '.services-with__button-next',
+                prevButton: '.services-with__button-prev',
+                spaceBetween: 30
+            });
+        }
+
+        /**
+         *  Ul/Ol change icon
+         */
+        $('[data-parent]').on('click', function() {
+            var target$ = $(this).find('i.fa');
+
+            if ( target$.hasClass('fa-arrow-circle-o-down') ) {
+                target$
+                    .removeClass('fa-arrow-circle-o-down')
+                    .addClass('fa-arrow-circle-o-up');
+            } else {
+                target$
+                    .removeClass('fa-arrow-circle-o-up')
+                    .addClass('fa-arrow-circle-o-down');
+            }
+        });
+
+        /**
+         *  Accordion change icon
+         */
+        $('#accordion').on('click', '[data-parent="#accordion"]', function() {
+            var target$ = $(this).find('i.fa');
+
+            $('i.fa-minus')
+                .not(target$)
+                .removeClass('fa-minus')
+                .addClass('fa-plus');
+
+            if ( target$.hasClass('fa-plus') ) {
+                target$
+                    .removeClass('fa-plus')
+                    .addClass('fa-minus');
+            } else {
+                target$
+                    .removeClass('fa-minus')
+                    .addClass('fa-plus');
+            }
         });
 
     });
