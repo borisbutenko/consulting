@@ -65,6 +65,124 @@ block main
 					.restuct
 						+icon('fa-truck icon-gray')
 						p Доставка готовых документов
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.title-br.title-small
+						h2 РЕСТРУКТУРИЗАЦИЯ ФИРМЫ: ОПИСАНИЕ УСЛУГ ПО РЕСТРУКТУРИЗАЦИИ
+						hr
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.swiper-container.audit
+						ul.swiper-wrapper.audit__list(role='tablist')
+							- var n = 0
+							while n < 7
+								- var cl = ''
+								- var href = '#tab-' + n
+								if ( n == 0 )
+									- cl = 'active'
+								else
+									- cl = ''
+								- var name = 'Tab name - ' + n++
+								li.swiper-slide.audit__item(role='presentation' class=cl)
+									a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
+						.swiper-button-prev.audit__button.audit__button-prev
+						.swiper-button-next.audit__button.audit__button-next
+			.row
+				.tab-content
+					- var n = 0
+					while n < 7
+						if ( n == 0 )
+							- cl = 'in active'
+						else
+							- cl = ''
+						- var id = 'tab-' + n
+						- n++
+						aside.aside.aside-audit.tab-pane.fade.clearfix(id=id role='tabpanel' class=cl)
+							.col-md-6.col-sm-6.col-xs-12
+								.aside__left.clearfix
+									.row
+										.aside__title
+											h3
+												+icon('fa-newspaper-o icon-gray')
+												| Что мы для вас делаем - #{n}
+									.row
+										ul#aside-accordion.aside-accordion(role='tablist' aria-multiselectable='true')
+											- var a = 0
+											while a < 10
+												- var bn = '-' + getRandomInt(1, 1000)
+												- var val  = 'Услуга - ' + a++
+												- var liId = 'aside-accordion-' + a + bn
+												- var arCr = 'aside-accordion-collapse-' + a + bn
+												li.aside-accordion__item(role='tab' id=liId)
+													+icon('fa-check-circle-o icon-gray')
+													- var href = '#aside-accordion-collapse-' + a + bn
+													a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
+														+icon('fa-arrow-circle-o-down icon-gray')
+													i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+													- var pId  = 'aside-accordion-collapse-' + a + bn
+													- var arLb = 'aside-accordion-' + a + bn
+													p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+										span
+											h5 Стоимость:
+											| от 30 000 руб.
+										span
+											h5 Срок:
+											| 60 - 90 дней
+										.dop
+											span Дополнительные услуги
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-dop)
+											p Клиент получит:
+												img(src='assets/img/gerb2.png' alt='')
+							.col-md-6.col-sm-6.col-xs-12
+								.aside__right.clearfix
+									.row
+										.col-md-12.col-sm-12.col-xs-12
+											.aside__title
+												h3
+													+icon('fa-newspaper-o icon-gray')
+													| Что потребуется от вас - #{n}
+									.row
+										.col-md-12.col-sm-12.col-xs-12
+											p.aside__info
+												span Сведения и документы, которые нам потребуются
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-info)
+										.row
+											.col-md-3.col-sm-3.col-xs-12.text-center(style='margin-left:3%')
+												+icon('fa-headphones icon-black')
+												h5 Позвоните нам
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+											.col-md-3.col-sm-3.col-xs-12.text-center
+												+icon('fa-question-circle-o icon-black')
+												h5 Задайте вопрос
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+											.col-md-3.col-sm-3.col-xs-12.text-center
+												+icon('fa-sticky-note-o icon-black')
+												h5 Получите ответ
+												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.aside__callback
+											.row
+												.col-md-12.col-sm-12.col-xs-12
+													h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+											.row
+												.col-md-6.col-sm-12.col-xs-12
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+														+icon('fa-user icon-gray')
+												.col-md-6.col-sm-12.col-xs-12
+													span.text-input.form-group
+														input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+														+icon('fa-mobile icon-gray')
+											.row
+												.col-md-8.col-sm-12.col-xs-12
+													p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+												.col-md-4.col-sm-12.col-xs-12
+													button.btn.btn-primary(type='submit') ОТПРАВИТЬ
 			.row.mt-8
 				.col-md-4.col-sm-6.col-xs-12
 					ul.tab-list(role='tablist')

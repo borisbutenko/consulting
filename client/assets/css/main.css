@@ -10022,7 +10022,7 @@ template {
   background-image: linear-gradient(to top, #f7f7f7, transparent);
 }
 .section__catalog .categories__item:hover {
-  position: absolute;
+  float: left;
   left: 0;
   width: 96%;
   z-index: 100;
@@ -10457,7 +10457,7 @@ template {
   border: 0.1rem solid transparent;
   border-right: none;
   margin: 0.5rem 0;
-  margin-right: 2rem;
+  margin-right: 3rem;
   color: #333;
   position: relative;
 }
@@ -11147,6 +11147,15 @@ p {
   top: -0.4rem;
   left: 0;
   z-index: 5;
+}
+.title-small {
+  margin: 4rem 0;
+}
+.title-small h2 {
+  font-size: 2.5rem;
+}
+.title-small p {
+  margin-top: 1rem;
 }
 .mt-4 {
   margin-top: 4rem;

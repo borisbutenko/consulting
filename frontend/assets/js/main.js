@@ -187,12 +187,6 @@
                 $(window).scrollTop()
             );
 
-            $('.tab-list__link').on('click', function() {
-                $(this).parents('.tab-list').css({
-                    position : 'relative'
-                });
-            });
-
             function getCoords(elem) {
                 var box = elem.getBoundingClientRect();
 
@@ -216,6 +210,21 @@
                     ).height ),
                     outherPosition = coordsE.top + height;
 
+                $('.tab-list__link')
+                    .off('click')
+                    .on('click', function() {
+                        target$.parent().css({
+                            height   : height
+                        });
+                        $('html, body').animate({
+                            scrollTop : coordsE.top
+                        }, 300);
+
+                        action(
+                            $(window).scrollTop()
+                        );
+                    });
+
                 target$.css({
                     width : $('.col-md-4.col-sm-6.col-xs-12').width() || $('.col-md-3.col-sm-5.col-xs-12').width()
                 });
@@ -236,14 +245,17 @@
                     });
                 }
 
+                console.log( s + wh, outherPosition, target$.height() <= tab$.height() )
+
                 if ( s + wh >= outherPosition ) {
                     target$.parent().css({
-                            height   : height
+                            height   : ( target$.height() <= tab$.height() ) ? height : ''
                         }).end().css({
-                            position : 'absolute',
+                            position : ( target$.height() <= tab$.height() ) ? 'absolute' : 'relative',
                             top      : 'unset',
                             bottom   : 0,
-                            left     : 0
+                            left     : 0,
+                            overflow : 'hidden'
                         })
                 }
             }
