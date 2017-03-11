@@ -1,0 +1,24 @@
+.tooltip_templates(hidden)
+	#tooltip-question
+		p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		hr
+		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
+	#tooltip-question-info
+		button.btn.btn-default.btn-print(type='button')
+			+icon('fa-print icon-white')
+			| Распечатать
+		ul
+			- var n = 0
+			while n < 9
+				- var name = 'Name - ' + n++
+				li
+					+icon('fa-newspaper-o icon-gray')
+					= name
+	#tooltip-question-dop
+		ul
+			- var n = 0
+			while n < 9
+				- var name = 'Name - ' + n++
+				li
+					+icon('fa-minus icon-gray')
+					= name

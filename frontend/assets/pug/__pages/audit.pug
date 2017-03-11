@@ -58,7 +58,7 @@ block main
 													- var href = '#aside-accordion-collapse-' + a + bn
 													a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
 														+icon('fa-arrow-circle-o-down icon-gray')
-													+icon('fa-question-circle-o icon-gray')
+													i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
 													- var pId  = 'aside-accordion-collapse-' + a + bn
 													- var arLb = 'aside-accordion-' + a + bn
 													p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
@@ -71,7 +71,7 @@ block main
 											| 60 - 90 дней
 										.dop
 											span Дополнительные услуги
-											+icon('fa-question-circle-o icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-dop)
 											p Клиент получит:
 												img(src='assets/img/gerb2.png' alt='')
 							.col-md-6.col-sm-6.col-xs-12
@@ -86,7 +86,7 @@ block main
 										.col-md-12.col-sm-12.col-xs-12
 											p.aside__info
 												span Сведения и документы, которые нам потребуются
-												+icon('fa-question-circle-o icon-gray')
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-info)
 										.row
 											.col-md-3.col-sm-3.col-xs-12.text-center(style='margin-left:3%')
 												+icon('fa-headphones icon-black')
@@ -127,7 +127,7 @@ block main
 					.title-br
 						h2
 							| КАК БЫСТРО ПРОВЕСТИ РЕСТРУКТУРИЗАЦИЮ
-							+icon('fa-question-circle-o icon-gray')
+							i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
 						hr
 			.row.hidden-xs
 				.col-md-12.col-sm-12.col-xs-12.text-center
@@ -214,7 +214,7 @@ block main
 															a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
 																| В итоге вы получите одно из решений
 																+icon('fa-arrow-circle-o-down icon-blue')
-															+icon('fa-question-circle-o icon-gray')
+															i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
 															p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 													button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 														+icon('fa-print icon-white')
@@ -231,7 +231,7 @@ block main
 							while s < 7
 								- var service = 'Service name - ' + s++
 								li.swiper-slide.services-with__item.categories__item
-									a.services-with__link.categories__link(href='#0')
+									a.services-with__link.categories__link(href='audit.html')
 										+icon('fa-book icon-blue')
 										= service
 						.swiper-button-prev.services-with__button.services-with__button-prev

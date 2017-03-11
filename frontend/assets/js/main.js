@@ -168,6 +168,122 @@
             }
         });
 
+        /**
+         *  Fixies menu
+         */
+        (function() {
+            var target$ = $('ul.tab-list'),
+                coordsT = getCoords( target$[0] ),
+                styles  = getComputedStyle( target$[0] ),
+                wh      = parseInt( styles.height );
+
+            window.onscroll = function() {
+                action(
+                    $(window).scrollTop()
+                )
+            };
+
+            action(
+                $(window).scrollTop()
+            );
+
+            $('.tab-list__link').on('click', function() {
+                $(this).parents('.tab-list').css({
+                    position : 'relative'
+                });
+            });
+
+            function getCoords(elem) {
+                var box = elem.getBoundingClientRect();
+
+                return {
+                    top: box.top + pageYOffset,
+                    left: box.left + pageXOffset
+                };
+
+            }
+
+            function action(s) {
+                var tab$   = $('div.tab-pane.in.active');
+
+                if ( !tab$.length ) return false;
+
+                var coordsE = getCoords( tab$[0] );
+
+                var height = parseInt(
+                    getComputedStyle(
+                        tab$[0]
+                    ).height ),
+                    outherPosition = coordsE.top + height;
+
+                target$.css({
+                    width : $('.col-md-4.col-sm-6.col-xs-12').width() || $('.col-md-3.col-sm-5.col-xs-12').width()
+                });
+
+                if ( s >= coordsT.top ) {
+                    target$.css({
+                        position : 'fixed',
+                        top      : 0,
+                        bottom   : 'unset',
+                        left     : 'unset'
+                    });
+                } else {
+                    target$.css({
+                        position : 'relative',
+                        top      : 'unset',
+                        bottom   : 'unset',
+                        left     : 'unset'
+                    });
+                }
+
+                if ( s + wh >= outherPosition ) {
+                    target$.parent().css({
+                            height   : height
+                        }).end().css({
+                            position : 'absolute',
+                            top      : 'unset',
+                            bottom   : 0,
+                            left     : 0
+                        })
+                }
+            }
+        })();
+
+        /**
+         * Tooltipster
+         */
+        (function() {
+            $('[data-tooltip]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-question'),
+                contentCloning  : true,
+                trigger         : 'click',
+                maxWidth        : 400,
+                side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-info]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-question-info'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'left',
+                interactive     : true
+            });
+
+            $('[data-tooltip-dop]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-question-dop'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'right',
+                interactive     : true
+            });
+        })();
+
     });
 
 })(jQuery);

@@ -1,0 +1,149 @@
+extends ../base
+block main
+	- function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
+	section.section.section__audit
+		.container
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					.main__title
+						+icon('fa-pencil-square-o icon-blue')
+						.title-br
+							h2 АУДИТ
+							hr
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					- var n = 1
+					ul.categories-audit
+						while n <= 6
+							- var name = 'Категория - ' + n++
+							li.categories-audit__item
+								a.categories-audit__link(href='audit.html')
+									+icon('fa-book icon-gray')
+									= name
+					- var n = 7
+					ul.categories-audit.categories-hidden(hidden)
+						while n <= 12
+							- var name = 'Категория - ' + n++
+							li.categories-audit__item
+								a.categories-audit__link(href='audit.html')
+									+icon('fa-book icon-gray')
+									= name
+			.row
+				.col-md-12.col-sm-12.col-xs-12
+					button.btn.btn-default#show-categories(type='button')
+						+icon('fa-plus-square-o icon-gray')
+						| Ещё категории
+			.row.hidden-xs.mt-4
+				.col-md-12.col-sm-12.col-xs-12
+					.title-br
+						h2
+							| КАК БЫСТРО ПРОВЕСТИ РЕСТРУКТУРИЗАЦИЮ
+							i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+						hr
+			.row.hidden-xs
+				.col-md-12.col-sm-12.col-xs-12.text-center
+					.restuct
+						+icon('fa-files-o icon-gray')
+						p Предоставление копий документов
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-pencil-square-o icon-gray')
+						p Подготовка документов
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-check-circle-o icon-gray')
+						p Заверенные формы у нотариуса
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-credit-card icon-gray')
+						p Оплата услуг
+					.restuct
+						img(src='assets/img/arrow-right.png' alt='')
+					.restuct
+						+icon('fa-truck icon-gray')
+						p Доставка готовых документов
+			.row.mt-8
+				.col-md-4.col-sm-6.col-xs-12
+					ul.tab-list(role='tablist')
+						- var t = 0
+						while t < 7
+							- var cls = ''
+							- var href = '#tab-list-' + t
+							if ( t == 0 )
+								- cls = 'active'
+							else
+								- cls = ''
+							- t++
+							- var name = 'Tab name - ' + t
+							li.tab-list__item(role='presentation' class=cls)
+								a.tab-list__link(href=href aria-controls='home' role='tab' data-toggle='tab')
+									+icon('fa-child icon-gray')
+									= name
+				.col-md-8.col-sm-6.col-xs-12
+					.tab-content
+						- var t = 0
+						while t < 7
+							- var ids = 'tab-list-' + t
+							- var cls = ''
+							if ( t == 0 )
+								- cls = 'in active'
+							else
+								- cls = ''
+							- t++
+							.tab-pane.fade(id=ids role='tabpanel' class=cls)
+								#accordion.panel-group(role='tablist' aria-multiselectable='true')
+									h4 РЕСТРУКТУРИЗАЦИЯ ФИРМЫ: ОПИСАНИЕ УСЛУГ
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									- var a = 0
+									while a < 4
+										- var b = '-' + getRandomInt(1, 1000)
+										- a++
+										- var ida  = 'tab-list-accordion-'  + a + b
+										- var idh  = 'tab-list-collapse-'   + a + b
+										- var hr   = '#tab-list-collapse-'  + a + b
+										- var name = 'Tab item - '          + a
+										.panel.panel-default
+											.panel-heading(id=ida role='tab')
+												h4.panel-title
+													a(href=hr role='button' data-toggle='collapse' data-parent='#accordion' aria-expanded='false' aria-controls=idh)
+														+icon('fa-plus icon-gray')
+														= name
+											.panel-collapse.collapse(id=idh role='tabpanel' aria-labelledby=ida)
+												.panel-body
+													ol
+														li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+														li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+														li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													div#result-accordion(aria-multiselectable='false' role='tablist')
+														- var idr = 'result-accordion-' + getRandomInt(1, 1000)
+														- var idc = 'result-collapse-' + getRandomInt(1, 1000)
+														- var hdr = '#' + idc
+														div(id=idr role='tab')
+															a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
+																| В итоге вы получите одно из решений
+																+icon('fa-arrow-circle-o-down icon-blue')
+															i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+															p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
+														+icon('fa-print icon-white')
+														| Распечатать
+			.row.mt-4
+				.col-md-12.col-sm-12.col-xs-12
+					.title-br
+						h2 С ЭТОЙ УСЛУГОЙ ЧАСТО ЗАКАЗЫВАЮТ
+						hr
+				.col-md-12.col-sm-12.col-xs-12
+					.swiper-container.services-with
+						ul.swiper-wrapper.services-with__list.categories(role='tablist')
+							- var s = 0
+							while s < 7
+								- var service = 'Service name - ' + s++
+								li.swiper-slide.services-with__item.categories__item
+									a.services-with__link.categories__link(href='audit.html')
+										+icon('fa-book icon-blue')
+										= service
+						.swiper-button-prev.services-with__button.services-with__button-prev
+						.swiper-button-next.services-with__button.services-with__button-next

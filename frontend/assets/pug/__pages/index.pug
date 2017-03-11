@@ -13,7 +13,7 @@ block main
 						while n < 16
 							- var name = 'Категория - ' + n++
 							li.categories__item
-								a.categories__link(href='#0')
+								a.categories__link(href='audit-2.html')
 									+icon('fa-book icon-blue')
 									= name
 								- var i = 1
@@ -21,17 +21,17 @@ block main
 									while i < 7
 										- var value = 'Услуга - ' + i++
 										li.categories-body__item
-											a.categories-body__link(href='#0')
+											a.categories-body__link(href='audit-2.html')
 												+icon('fa-certificate icon-gray')
 												= value
-									a.categories__link-all(href='#0') Все вопросы
+									a.categories__link-all(href='audit-2.html') Все вопросы
 										+icon('fa-arrow-right icon-blue')
 					- var n = 16
 					ul.categories.categories-hidden(hidden)
 						while n < 31
 							- var name = 'Категория - ' + n++
 							li.categories__item
-								a.categories__link(href='#0')
+								a.categories__link(href='audit-2.html')
 									+icon('fa-book icon-blue')
 									= name
 								- var i = 1
@@ -39,11 +39,11 @@ block main
 									while i < 7
 										- var value = 'Услуга - ' + i++
 										li.categories-body__item
-											a.categories-body__link(href='#0')
+											a.categories-body__link(href='audit-2.html')
 												+icon('fa-certificate icon-gray')
 												= value
 				.col-md-12.col-sm-12.col-xs-12
-					button#show-categories(type='button')
+					button.btn.btn-default#show-categories(type='button')
 						+icon('fa-plus-square-o icon-gray')
 						| Ещё категории
 	section.section.section__callback
