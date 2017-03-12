@@ -119,15 +119,24 @@
   & > *:first-of-type
     border-right: .1rem solid #c1c1c1
     padding-right: 5rem
+    @media (max-width: 768px)
+      border: none
+      padding-right: 1.5rem
   & > *:last-of-type
     padding-left: 5rem
+    @media (max-width: 768px)
+      padding-left: 1.5rem
   &__right
+    @media (max-width: 768px)
+      margin-bottom: -12rem
     & i.fa
       font-size: 5rem
     & h5
       margin: 1rem 0
       & + p
         font-size: 1.2rem
+        @media (max-width: 768px)
+          margin-bottom: 2rem
   &__callback
     padding: 4rem 0
     & h2
@@ -144,7 +153,7 @@
 
 .audit
   position: static
-  width: 95%
+  width: 85%
   &__item
     text-align: center
     &.active > a
@@ -161,12 +170,16 @@
   &__button
     &-prev
       left: 0
+      @media (max-width: 768px)
+        left: .5rem
     &-next
       right: 0
+      @media (max-width: 768px)
+        right: .5rem
 
 .services-with
   position: static
-  width: 95%
+  width: 85%
   &__item
     text-align: center
     &.active > a
@@ -182,8 +195,12 @@
   &__button
     &-prev
       left: 0
+      @media (max-width: 768px)
+        left: .5rem
     &-next
       right: 0
+      @media (max-width: 768px)
+        right: .5rem
 
 .aside-accordion
   max-height: 20rem

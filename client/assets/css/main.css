@@ -10401,8 +10401,24 @@ template {
   border-right: 0.1rem solid #c1c1c1;
   padding-right: 5rem;
 }
+@media (max-width: 768px) {
+  .aside > *:first-of-type {
+    border: none;
+    padding-right: 1.5rem;
+  }
+}
 .aside > *:last-of-type {
   padding-left: 5rem;
+}
+@media (max-width: 768px) {
+  .aside > *:last-of-type {
+    padding-left: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .aside__right {
+    margin-bottom: -12rem;
+  }
 }
 .aside__right i.fa {
   font-size: 5rem;
@@ -10412,6 +10428,11 @@ template {
 }
 .aside__right h5 + p {
   font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .aside__right h5 + p {
+    margin-bottom: 2rem;
+  }
 }
 .aside__callback {
   padding: 4rem 0;
@@ -10433,7 +10454,7 @@ template {
 }
 .audit {
   position: static;
-  width: 95%;
+  width: 85%;
 }
 .audit__item {
   text-align: center;
@@ -10455,12 +10476,22 @@ template {
 .audit__button-prev {
   left: 0;
 }
+@media (max-width: 768px) {
+  .audit__button-prev {
+    left: 0.5rem;
+  }
+}
 .audit__button-next {
   right: 0;
 }
+@media (max-width: 768px) {
+  .audit__button-next {
+    right: 0.5rem;
+  }
+}
 .services-with {
   position: static;
-  width: 95%;
+  width: 85%;
 }
 .services-with__item {
   text-align: center;
@@ -10481,8 +10512,18 @@ template {
 .services-with__button-prev {
   left: 0;
 }
+@media (max-width: 768px) {
+  .services-with__button-prev {
+    left: 0.5rem;
+  }
+}
 .services-with__button-next {
   right: 0;
+}
+@media (max-width: 768px) {
+  .services-with__button-next {
+    right: 0.5rem;
+  }
 }
 .aside-accordion {
   max-height: 20rem;
