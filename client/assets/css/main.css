@@ -10279,7 +10279,7 @@ template {
 .section__audit .restuct {
   vertical-align: top;
   margin-top: 2rem;
-  width: 10%;
+  width: 100%;
   display: inline-block;
   position: relative;
   text-align: center;
@@ -10296,7 +10296,8 @@ template {
 }
 .section__audit .restuct img {
   width: 5rem;
-  position: relative;
+  position: absolute;
+  right: -3rem;
   top: 2rem;
 }
 .section__audit .categories {
@@ -10507,6 +10508,26 @@ template {
 }
 @media (max-width: 768px) {
   .audit__button-next {
+    right: 0.5rem;
+  }
+}
+.swiper-restruct {
+  position: static;
+  width: 85%;
+}
+.swiper-restruct .services-with__button-prev {
+  left: 0;
+}
+@media (max-width: 768px) {
+  .swiper-restruct .services-with__button-prev {
+    left: 0.5rem;
+  }
+}
+.swiper-restruct .services-with__button-next {
+  right: 0;
+}
+@media (max-width: 768px) {
+  .swiper-restruct .services-with__button-next {
     right: 0.5rem;
   }
 }

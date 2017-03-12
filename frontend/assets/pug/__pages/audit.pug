@@ -137,31 +137,46 @@ block main
 						hr
 			.row.hidden-xs
 				.col-md-12.col-sm-12.col-xs-12.text-center
-					.restuct
-						+icon('fa-files-o icon-gray')
-						p Предоставление копий документов
-					.restuct
-						img(src='assets/img/arrow-right.png' alt='')
-					.restuct
-						+icon('fa-pencil-square-o icon-gray')
-						p Подготовка документов
-					.restuct
-						img(src='assets/img/arrow-right.png' alt='')
-					.restuct
-						+icon('fa-check-circle-o icon-gray')
-						p Заверенные формы у нотариуса
-					.restuct
-						img(src='assets/img/arrow-right.png' alt='')
-					.restuct
-						+icon('fa-credit-card icon-gray')
-						p Оплата услуг
-					.restuct
-						img(src='assets/img/arrow-right.png' alt='')
-					.restuct
-						+icon('fa-truck icon-gray')
-						p Доставка готовых документов
+					.swiper-container.swiper-restruct
+						.swiper-wrapper
+							.swiper-slide
+								.restuct
+									+icon('fa-files-o icon-gray')
+									p Предоставление копий документов
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-pencil-square-o icon-gray')
+									p Подготовка документов
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-check-circle-o icon-gray')
+									p Заверенные формы у нотариуса
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-credit-card icon-gray')
+									p Оплата услуг
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-files-o icon-gray')
+									p Предоставление копий документов
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-pencil-square-o icon-gray')
+									p Подготовка документов
+									img(src='assets/img/arrow-right.png' alt='')
+							.swiper-slide
+								.restuct
+									+icon('fa-check-circle-o icon-gray')
+									p Заверенные формы у нотариуса
+						.swiper-button-prev.services-with__button.services-with__button-prev
+						.swiper-button-next.services-with__button.services-with__button-next
 			.row.mt-8.data-order
-				.col-md-4.col-sm-6.col-xs-12
+				.col-md-4.col-sm-6.col-xs-12.data-order-last
 					ul.tab-list(role='tablist')
 						- var t = 0
 						while t < 7
@@ -177,7 +192,7 @@ block main
 								a.tab-list__link(href=href aria-controls='home' role='tab' data-toggle='tab')
 									+icon('fa-child icon-gray')
 									= name
-				.col-md-8.col-sm-6.col-xs-12
+				.col-md-8.col-sm-6.col-xs-12.data-order-first
 					.tab-content
 						- var t = 0
 						while t < 7

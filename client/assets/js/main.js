@@ -132,6 +132,14 @@
             });
         }
 
+        new Swiper('.swiper-restruct', {
+            slidesPerView: 4,
+            paginationClickable: true,
+            nextButton: '.services-with__button-next',
+            prevButton: '.services-with__button-prev',
+            spaceBetween: 30
+        });
+
         /**
          *  Ul/Ol change icon
          */
