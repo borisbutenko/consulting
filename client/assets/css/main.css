@@ -11435,3 +11435,11 @@ p {
   margin-top: 0.5rem;
   display: none;
 }
+.ml3prc {
+  margin-left: 3%;
+}
+@media (max-width: 768px) {
+  .ml3prc {
+    margin-left: 0;
+  }
+}
