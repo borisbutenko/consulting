@@ -46,9 +46,9 @@
          * Show fixed buttons
          */
         (function($) {
-
             var callback$ = $('#callback-button'),
-                toTop$    = $('#top-button');
+                toTop$    = $('#top-button'),
+                toBack$   = $('#back-button');
 
             $(window).scroll(function () {
                 showBtn();
@@ -60,10 +60,13 @@
                 if ( $('body').scrollTop()  > 500) {
                     callback$.addClass('active');
                     toTop$.addClass('active');
+                    toBack$
+                        .addClass('active')
                 }
                 else {
                     callback$.removeClass('active');
                     toTop$.removeClass('active');
+                    toBack$.removeClass('active')
                 }
             }
 
@@ -149,7 +152,7 @@
         /**
          *  Accordion change icon
          */
-        $('#accordion').on('click', '[data-parent="#accordion"]', function() {
+        $('#accordion').on('click', '[data-parent]', function() {
             var target$ = $(this).find('i.fa');
 
             $('i.fa-minus')
@@ -191,6 +194,8 @@
             );
 
             function getCoords(elem) {
+                if ( !$(elem).length ) return false;
+
                 var box = elem.getBoundingClientRect();
 
                 return {
@@ -214,9 +219,14 @@
                 $('.tab-list__link')
                     .off('click')
                     .on('click', function() {
-                        target$.parent().css({
-                            height   : height
+                        $(this).parents('ul').css({
+                            left : '0'
                         });
+
+                        target$.parents('ul').css({
+                            height  : height
+                        });
+
                         $('html, body').animate({
                             scrollTop : coordsE.top
                         }, 300);
@@ -232,17 +242,17 @@
 
                 if ( s >= coordsT.top ) {
                     target$.css({
-                        position : 'fixed',
-                        top      : 0,
-                        bottom   : 'unset',
-                        left     : 'unset'
+                        position    : 'fixed',
+                        top         : 0,
+                        bottom      : 'unset',
+                        left        : 'unset'
                     });
                 } else {
                     target$.css({
-                        position : 'relative',
-                        top      : 'unset',
-                        bottom   : 'unset',
-                        left     : 'unset'
+                        position    : 'relative',
+                        top         : 'unset',
+                        bottom      : 'unset',
+                        left        : 'unset'
                     });
                 }
 
@@ -250,11 +260,11 @@
                     target$.parent().css({
                             height   : ( target$.height() <= tab$.height() ) ? height : ''
                         }).end().css({
-                            position : ( target$.height() <= tab$.height() ) ? 'absolute' : 'relative',
-                            top      : 'unset',
-                            bottom   : 0,
-                            left     : 0,
-                            overflow : 'hidden'
+                            position    : ( target$.height() <= tab$.height() ) ? 'absolute' : 'relative',
+                            top         : 'unset',
+                            bottom      : 0,
+                            left        : '1.5rem',
+                            overflow    : 'hidden'
                         })
                 }
             }
@@ -280,7 +290,7 @@
                 contentCloning  : true,
                 trigger         : 'click',
                 minWidth        : 300,
-                side            : 'left',
+                side            : 'top',
                 interactive     : true
             });
 
@@ -291,6 +301,16 @@
                 trigger         : 'click',
                 minWidth        : 300,
                 side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-price]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-question-price'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'top',
                 interactive     : true
             });
         })();

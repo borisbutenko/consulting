@@ -10008,6 +10008,27 @@ template {
 #tooltip-question-dop ul li i.fa {
   margin-right: 1rem;
 }
+#tooltip-question-price ul {
+  max-width: 30rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+#tooltip-question-price ul::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#tooltip-question-price ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0,0,0,0.3);
+}
+#tooltip-question-price ul::-webkit-scrollbar-thumb {
+  background-color: #3393ce;
+  outline: 0.1rem solid #708090;
+}
+#tooltip-question-price ul li {
+  padding: 1rem 0;
+}
+#tooltip-question-price ul li i.fa {
+  margin-right: 0.5rem;
+}
 .section__catalog {
   padding: 4rem 0;
 }
@@ -10569,6 +10590,7 @@ template {
   margin-top: 4rem;
 }
 .aside-accordion ~ span {
+  cursor: pointer;
   display: inline-block;
   width: 49%;
   background: rgba(153,153,153,0.3);
@@ -10592,21 +10614,22 @@ template {
 .aside-accordion ~ span:last-of-type {
   margin-right: 0;
 }
-.aside-accordion ~ .dop span {
+.aside-accordion ~ .dop b > span {
   cursor: pointer;
   color: rgba(51,51,51,0.5);
   border-bottom: 0.1rem dashed;
   display: inline-block;
   margin: 2rem 0;
 }
-.aside-accordion ~ .dop span + i.fa {
+.aside-accordion ~ .dop b > span + i.fa {
   margin-left: 0.5rem;
 }
-.aside-accordion ~ .dop p {
+.aside-accordion ~ .dop > div > span {
+  cursor: pointer;
   font-size: 2rem;
   font-weight: 500;
 }
-.aside-accordion ~ .dop p img {
+.aside-accordion ~ .dop > div > span img {
   max-width: 10rem;
   margin-left: 2rem;
 }
@@ -10678,38 +10701,46 @@ template {
   margin-right: 1rem;
 }
 @media (max-width: 768px) {
-  #accordion {
+  .panel-group {
     margin-top: 2rem;
   }
 }
-#accordion [data-parent="#accordion"] {
+.panel-group .panel-heading {
+  padding: 0;
+}
+.panel-group .panel-heading > [data-parent] {
+  display: block;
+  padding: 1rem;
+  padding-left: 2rem;
   color: #808080;
+}
+.panel-group .panel-heading > [data-parent] span {
   border-bottom: 0.1rem dashed #e1e1e1;
 }
-#accordion [data-parent="#accordion"] i.fa {
+.panel-group .panel-heading > [data-parent] i.fa {
   margin-right: 1rem;
 }
-#accordion [data-parent="#accordion"][aria-expanded=true] {
+.panel-group .panel-heading > [data-parent][aria-expanded=true] {
   color: #000;
   border: none;
 }
-#accordion [data-parent="#accordion"][aria-expanded=true] i.fa {
+.panel-group .panel-heading > [data-parent][aria-expanded=true] i.fa {
   color: #000;
 }
-#accordion h4 + p {
+.panel-group h4 + p {
   margin: 2rem 0;
 }
-#accordion .panel ol li {
+.panel-group .panel ol li {
   padding-left: 1rem;
 }
-#accordion .panel ol + div {
+.panel-group .panel ol + div {
   padding-left: 3rem;
 }
-#accordion .panel ol + div a {
+.panel-group .panel ol + div a {
   display: inline-block;
   margin-bottom: 1rem;
 }
-#accordion .panel ol + div a i.fa {
+.panel-group .panel ol + div a i.fa {
   margin: 0 0.5rem;
 }
 .section__about .main__title {
@@ -11236,7 +11267,7 @@ p {
   margin: 0;
 }
 .main {
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 }
 .main__title {
   text-align: center;
@@ -11292,9 +11323,15 @@ p {
 #callback-button.active {
   right: 5rem;
 }
+@media (max-width: 768px) {
+  #callback-button.active {
+    right: 0.5rem;
+    bottom: 1rem;
+  }
+}
 #top-button {
   position: fixed;
-  bottom: 5rem;
+  bottom: 6rem;
   left: -4rem;
   font-size: 3rem;
   padding: 0 0.5rem;
@@ -11306,6 +11343,31 @@ p {
 }
 #top-button.active {
   left: 5rem;
+}
+@media (max-width: 768px) {
+  #top-button.active {
+    left: 0.5rem;
+  }
+}
+#back-button {
+  position: fixed;
+  bottom: 1rem;
+  left: -4rem;
+  font-size: 3rem;
+  padding: 0 0.6rem;
+  background: #efefef;
+  border: 0.1px solid #808080;
+  color: #efefef;
+  z-index: 9999;
+  transition: left 0.3s;
+}
+#back-button.active {
+  left: 5rem;
+}
+@media (max-width: 768px) {
+  #back-button.active {
+    left: 0.5rem;
+  }
 }
 .title-br {
   position: relative;
@@ -11454,6 +11516,30 @@ p {
 .section {
   position: relative;
 }
+.section__price {
+  padding: 4rem 0;
+  background: url("../img/contact.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+.section__price h2 {
+  margin-bottom: 2rem;
+}
+.section__price > span {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  display: inline-block;
+}
+.section__price-control span {
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  font-size: 1.8rem;
+}
+.section__price-control .btn {
+  display: block;
+}
 .section__overlay {
   width: 100%;
   height: 100%;
@@ -11482,5 +11568,28 @@ p {
 @media (max-width: 768px) {
   .ml3prc {
     margin-left: 0;
+  }
+}
+.panel-heading {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .data-order {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+  }
+  .data-order-last {
+    -ms-flex: 1 100%;
+        flex: 1 100%;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .data-order-first {
+    -ms-flex: 1 100%;
+        flex: 1 100%;
+    -ms-flex-order: 1;
+        order: 1;
   }
 }

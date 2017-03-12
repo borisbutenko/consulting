@@ -235,6 +235,7 @@
     border: .1rem solid #c1c1c1
     margin-top: 4rem
   & ~ span
+    cursor: pointer
     display: inline-block
     width: 49%
     background: rgba(153, 153, 153, .3);
@@ -252,7 +253,7 @@
     &:last-of-type
       margin-right: 0
   & ~ .dop
-    & span
+    & b > span
       cursor: pointer
       color: rgba(51, 51, 51, .5)
       border-bottom: .1rem dashed
@@ -260,7 +261,8 @@
       margin: 2rem 0
       & + i.fa
         margin-left: .5rem
-    & p
+    & > div > span
+      cursor: pointer
       font-size: 2rem
       font-weight: 500
       & img
@@ -327,19 +329,25 @@
       font-size: 2rem
       margin-right: 1rem
 
-#accordion
+.panel-group
   @media (max-width: 768px)
     margin-top: 2rem
-  & [data-parent="#accordion"]
-    color: #808080
-    border-bottom: .1rem dashed #e1e1e1
-    & i.fa
-      margin-right: 1rem
-    &[aria-expanded=true]
-      color: #000
-      border: none
+  & .panel-heading
+    padding: 0
+    & > [data-parent]
+      display: block
+      padding: 1rem
+      padding-left: 2rem
+      color: #808080
+      & span
+        border-bottom: .1rem dashed #e1e1e1
       & i.fa
+        margin-right: 1rem
+      &[aria-expanded=true]
         color: #000
+        border: none
+        & i.fa
+          color: #000
   & h4
     & + p
       margin: 2rem 0

@@ -22,3 +22,11 @@
 				li
 					+icon('fa-minus icon-gray')
 					= name
+	#tooltip-question-price
+		ul
+			- var n = 0
+			while n < 5
+				- var name = 'Пункт - ' + n++
+				li
+					+icon('fa-minus icon-gray')
+					= name

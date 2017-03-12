@@ -1,5 +1,9 @@
 extends ../base
 block main
+	- var bTitle = 'АУДИТ'
+	- var bText  = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat'
+	- var bPrice = '1000 руб.'
+	include ../__blocks/__price
 	- function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
 	section.section.section__audit
 		.container
@@ -63,17 +67,19 @@ block main
 													- var arLb = 'aside-accordion-' + a + bn
 													p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
 										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
-										span
+										span(data-tooltip-price)
 											h5 Стоимость:
 											| от 30 000 руб.
-										span
+										span(data-tooltip-price)
 											h5 Срок:
 											| 60 - 90 дней
 										.dop
-											span Дополнительные услуги
-											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-dop)
-											p Клиент получит:
-												img(src='assets/img/gerb2.png' alt='')
+											b(data-tooltip-dop)
+												span Дополнительные услуги
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+											div
+												span(data-tooltip-dop) Клиент получит:
+													img(src='assets/img/gerb2.png' alt='')
 							.col-md-6.col-sm-6.col-xs-12
 								.aside__right.clearfix
 									.row
@@ -84,9 +90,9 @@ block main
 													| Что потребуется от вас - #{n}
 									.row
 										.col-md-12.col-sm-12.col-xs-12
-											p.aside__info
+											p.aside__info(data-tooltip-info)
 												span Сведения и документы, которые нам потребуются
-												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-info)
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
 										.row
 											.col-md-3.col-sm-3.col-xs-12.text-center.ml3prc
 												+icon('fa-headphones icon-black')
@@ -154,7 +160,7 @@ block main
 					.restuct
 						+icon('fa-truck icon-gray')
 						p Доставка готовых документов
-			.row.mt-8
+			.row.mt-8.data-order
 				.col-md-4.col-sm-6.col-xs-12
 					ul.tab-list(role='tablist')
 						- var t = 0
@@ -196,10 +202,9 @@ block main
 										- var name = 'Tab item - '          + a
 										.panel.panel-default
 											.panel-heading(id=ida role='tab')
-												h4.panel-title
-													a(href=hr role='button' data-toggle='collapse' data-parent='#accordion' aria-expanded='false' aria-controls=idh)
-														+icon('fa-plus icon-gray')
-														= name
+												a(href=hr role='button' data-toggle='collapse' data-parent='#accordion' aria-expanded='false' aria-controls=idh)
+													+icon('fa-plus icon-gray')
+													span= name
 											.panel-collapse.collapse(id=idh role='tabpanel' aria-labelledby=ida)
 												.panel-body
 													ol
