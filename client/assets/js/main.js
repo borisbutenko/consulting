@@ -172,6 +172,9 @@
          *  Fixies menu
          */
         (function() {
+            if ( !$('div.tab-pane.in.active').length ) return false;
+            if ( window.innerWidth <= 767 ) return false;
+
             var target$ = $('ul.tab-list'),
                 coordsT = getCoords( target$[0] ),
                 styles  = getComputedStyle( target$[0] ),
@@ -199,8 +202,6 @@
 
             function action(s) {
                 var tab$   = $('div.tab-pane.in.active');
-
-                if ( !tab$.length ) return false;
 
                 var coordsE = getCoords( tab$[0] );
 
@@ -244,8 +245,6 @@
                         left     : 'unset'
                     });
                 }
-
-                console.log( s + wh, outherPosition, target$.height() <= tab$.height() )
 
                 if ( s + wh >= outherPosition ) {
                     target$.parent().css({
@@ -295,6 +294,61 @@
                 interactive     : true
             });
         })();
+
+        $('.menu-table td > a').hover(function() {
+            $(this)
+                .parent()
+                .addClass('hovered')
+                .children('a')
+                .css({
+                    width : '100%'
+                })
+                .parents('tr')
+                .children('td:not(.hovered)')
+                .hide();
+
+            $(this)
+                .parent()
+                .attr('colspan', '5');
+        }, function() {
+            $(this)
+                .css({
+                    width : '100%'
+                })
+                .parent()
+                .removeAttr('colspan')
+                .removeClass('hovered')
+                .parents('tr')
+                .children('td').show();
+        });
+
+        $('[data-menu-swiper]').hover(function() {
+            if ( !window.hoverWidth ) window.hoverWidth = $(this).width();
+
+            $(this)
+                .addClass('hovered')
+                .css({
+                    width : '100%'
+                })
+                .parent()
+                .children('li:not(.hovered)')
+                .hide();
+        }, function() {
+            $(this)
+                .removeClass('hovered')
+                .parent()
+                .children('li')
+                .css({
+                    width : window.hoverWidth
+                })
+                .show();
+        });
+
+        $('.menu-table__body__link').on('click', function(e) {
+            e.stopPropagation();
+            window.location = $(this).attr('href');
+            return false;
+        });
 
     });
 

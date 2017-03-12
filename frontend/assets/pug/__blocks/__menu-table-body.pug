@@ -1,0 +1,8 @@
+- var z = 1
+span.menu-table__body
+	while z <= 6
+		- var value = 'Услуга - ' + z++
+		span.menu-table__body__item
+			span.menu-table__body__link(href='audit-2.html')
+				+icon('fa-certificate icon-gray')
+				= value

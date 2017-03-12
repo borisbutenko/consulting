@@ -33,6 +33,51 @@
             color: #fff
             & i.fa
               color: #fff
+        &.hovered
+          & > a
+            position: relative
+            text-align: left
+            padding-left: 3rem
+            color: #fff
+            background: rgba(0, 121, 194, .8)
+            @media (max-width: 768px)
+              padding-left: 2rem
+            & > i.fa
+              text-align: left
+              padding-left: 2.5rem
+              color: #fff
+            & > span.menu-table__body
+              background: #0079c2
+              width: 81.3%
+              display: inline-block
+              position: absolute
+              left: 0
+              top: 0
+              font-size: 0
+              margin-left: 18.8%
+              text-align: left
+              padding: 1.5rem 2.5rem 0.5rem 8rem
+              border-left: none
+              @media (max-width: 768px)
+                display: none
+              & > *
+                font-size: 1.4rem
+                display: inline-block
+                width: 50%
+                & > *
+                  cursor: pointer
+                  display: inline-block
+                  padding: .2rem
+                  color: #fff
+                  line-height: 2.5rem
+                  &:hover
+                    background: rgba(35, 99, 138, .7)
+                  & i.fa
+                    margin-top: .2rem
+                    float: left
+                    font-size: 1.4rem
+                    color: #fff
+                    margin-right: 1rem
       &__link
         padding: 2rem
         display: block
@@ -133,7 +178,6 @@
     padding: 2rem 0
     color: #333
     &:hover
-      background: rgba(0, 121, 194, .8)
       color: #fff
   &__button
     &-prev

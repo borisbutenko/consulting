@@ -256,12 +256,13 @@ block main
 				.col-md-12.col-sm-12.col-xs-12
 					.swiper-container.services-with
 						ul.swiper-wrapper.services-with__list.categories(role='tablist')
-							- var s = 0
-							while s < 7
+							- var s = 1
+							while s <= 5
 								- var service = 'Service name - ' + s++
-								li.swiper-slide.services-with__item.categories__item
+								li.swiper-slide.services-with__item.categories__item(data-menu-swiper)
 									a.services-with__link.categories__link(href='audit.html')
 										+icon('fa-book icon-blue')
 										= service
+										include ../__blocks/__menu-table-body
 						.swiper-button-prev.services-with__button.services-with__button-prev
 						.swiper-button-next.services-with__button.services-with__button-next

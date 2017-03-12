@@ -10167,6 +10167,90 @@ template {
   width: 100%;
   margin-top: 2rem;
 }
+.menu-table {
+  margin-bottom: 0;
+}
+.menu-table__body {
+  display: none;
+}
+.menu-table > tbody > tr > td {
+  padding: 2rem;
+  text-align: center;
+  width: calc(100% / 5);
+  vertical-align: middle;
+  border: none;
+}
+.menu-table > tbody > tr > td > a {
+  width: 100%;
+  display: inline-block;
+  padding: 3rem 0;
+  color: #333;
+  text-align: center;
+  border: 0.1rem solid #b7b5b5;
+  background-image: linear-gradient(to top, #f7f7f7, transparent);
+}
+.menu-table > tbody > tr > td > a > i.fa {
+  display: block;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.menu-table > tbody > tr > td.hovered > a {
+  position: relative;
+  text-align: left;
+  padding-left: 3rem;
+  color: #fff;
+  background: rgba(0,121,194,0.8);
+}
+@media (max-width: 768px) {
+  .menu-table > tbody > tr > td.hovered > a {
+    padding-left: 2rem;
+  }
+}
+.menu-table > tbody > tr > td.hovered > a > i.fa {
+  text-align: left;
+  padding-left: 2.5rem;
+  color: #fff;
+}
+.menu-table > tbody > tr > td.hovered > a > span.menu-table__body {
+  background: #0079c2;
+  width: 81.3%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  font-size: 0;
+  margin-left: 18.8%;
+  text-align: left;
+  padding: 2.5rem;
+  padding-left: 8rem;
+  border: 0.1rem solid #b7b5b5;
+  border-left: none;
+}
+@media (max-width: 768px) {
+  .menu-table > tbody > tr > td.hovered > a > span.menu-table__body {
+    display: none;
+  }
+}
+.menu-table > tbody > tr > td.hovered > a > span.menu-table__body > * {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 50%;
+}
+.menu-table > tbody > tr > td.hovered > a > span.menu-table__body > * > * {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  padding-left: 1rem;
+  color: #fff;
+}
+.menu-table > tbody > tr > td.hovered > a > span.menu-table__body > * > *:hover {
+  background: rgba(35,99,138,0.7);
+}
+.menu-table > tbody > tr > td.hovered > a > span.menu-table__body > * > * i.fa {
+  color: #fff;
+  margin-right: 1rem;
+}
 .section__audit .tab-content {
   margin-bottom: 4rem;
   padding: 0 2rem;
@@ -10209,6 +10293,63 @@ template {
 }
 .section__audit .categories__item:hover a i.fa {
   color: #fff;
+}
+.section__audit .categories__item.hovered > a {
+  position: relative;
+  text-align: left;
+  padding-left: 3rem;
+  color: #fff;
+  background: rgba(0,121,194,0.8);
+}
+@media (max-width: 768px) {
+  .section__audit .categories__item.hovered > a {
+    padding-left: 2rem;
+  }
+}
+.section__audit .categories__item.hovered > a > i.fa {
+  text-align: left;
+  padding-left: 2.5rem;
+  color: #fff;
+}
+.section__audit .categories__item.hovered > a > span.menu-table__body {
+  background: #0079c2;
+  width: 81.3%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0;
+  margin-left: 18.8%;
+  text-align: left;
+  padding: 1.5rem 2.5rem 0.5rem 8rem;
+  border-left: none;
+}
+@media (max-width: 768px) {
+  .section__audit .categories__item.hovered > a > span.menu-table__body {
+    display: none;
+  }
+}
+.section__audit .categories__item.hovered > a > span.menu-table__body > * {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 50%;
+}
+.section__audit .categories__item.hovered > a > span.menu-table__body > * > * {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.2rem;
+  color: #fff;
+  line-height: 2.5rem;
+}
+.section__audit .categories__item.hovered > a > span.menu-table__body > * > *:hover {
+  background: rgba(35,99,138,0.7);
+}
+.section__audit .categories__item.hovered > a > span.menu-table__body > * > * i.fa {
+  margin-top: 0.2rem;
+  float: left;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-right: 1rem;
 }
 .section__audit .categories__link {
   padding: 2rem;
@@ -10335,7 +10476,6 @@ template {
   color: #333;
 }
 .services-with__link:hover {
-  background: rgba(0,121,194,0.8);
   color: #fff;
 }
 .services-with__button-prev {

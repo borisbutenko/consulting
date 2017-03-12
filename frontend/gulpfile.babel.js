@@ -187,7 +187,7 @@ gulp.task('fonts', () => {
 /**
  * Compile pug files
  */
-let page = 'audit-2.pug';
+let page = 'page.pug';
 
 const pugPath = {
     from : [`${dirs.from}pug/__pages/**/*.pug`],
