@@ -1,32 +1,71 @@
 .tooltip_templates(hidden)
-	#tooltip-question
-		p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	#tooltip-service-1
+		p Услуга - 1. Описание услуги - 1.
 		hr
 		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
-	#tooltip-question-info
+	#tooltip-service-2
+		p Услуга - 2. Описание услуги - 2.
+		hr
+		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
+	#tooltip-service-3
+		p Услуга - 3. Описание услуги - 3.
+		hr
+		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
+	#tooltip-service-4
+		p Услуга - 4. Описание услуги - 4.
+		hr
+		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
+	#tooltip-service-5
+		p Услуга - 5. Описание услуги - 5.
+		hr
+		a.btn.btn-primary(href='#0') ПОДРОБНЕЕ
+
+	#tooltip-info
 		button.btn.btn-default.btn-print(type='button')
 			+icon('fa-print icon-white')
 			| Распечатать
 		ul
-			- var n = 0
-			while n < 9
-				- var name = 'Name - ' + n++
-				li
-					+icon('fa-newspaper-o icon-gray')
-					= name
-	#tooltip-question-dop
+			li
+				+icon('fa-newspaper-o icon-gray')
+				| Свидетельство ИНН (при наличии)
+			li
+				+icon('fa-newspaper-o icon-gray')
+				| Паспорт РФ или инострранного гражданина/удостоверение личности для лица без гражданства
+			li
+				+icon('fa-newspaper-o icon-gray')
+				| Вид или виды экономической деятельности ИП
+			li
+				+icon('fa-newspaper-o icon-gray')
+				| Наименование банка, где будет открыт счет (при необходимости)
+	#tooltip-price
 		ul
 			- var n = 0
 			while n < 9
-				- var name = 'Name - ' + n++
+				- var name = 'Стоимость - ' + n++
 				li
 					+icon('fa-minus icon-gray')
 					= name
-	#tooltip-question-price
+	#tooltip-term
 		ul
 			- var n = 0
-			while n < 5
-				- var name = 'Пункт - ' + n++
+			while n < 9
+				- var name = 'Срок - ' + n++
+				li
+					+icon('fa-minus icon-gray')
+					= name
+	#tooltip-dop
+		ul
+			- var n = 0
+			while n < 9
+				- var name = 'Доп. услуга - ' + n++
+				li
+					+icon('fa-minus icon-gray')
+					= name
+	#tooltip-cl
+		ul
+			- var i = 0
+			while i < 5
+				- var name = 'Клиент получит - ' + i++
 				li
 					+icon('fa-minus icon-gray')
 					= name

@@ -70,7 +70,7 @@ block main
 										span(data-tooltip-price)
 											h5 Стоимость:
 											| от 30 000 руб.
-										span(data-tooltip-price)
+										span(data-tooltip-term)
 											h5 Срок:
 											| 60 - 90 дней
 										.dop
@@ -78,7 +78,7 @@ block main
 												span Дополнительные услуги
 												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
 											div
-												span(data-tooltip-dop) Клиент получит:
+												span(data-tooltip-cl) Клиент получит:
 													img(src='assets/img/gerb2.png' alt='')
 							.col-md-6.col-sm-6.col-xs-12
 								.aside__right.clearfix
@@ -183,6 +183,8 @@ block main
 							- var cls = ''
 							- var href = '#tab-list-' + t
 							if ( t == 0 )
+								- cls = 'hide'
+							else if ( t == 1 )
 								- cls = 'active'
 							else
 								- cls = ''
@@ -234,7 +236,6 @@ block main
 															a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
 																| В итоге вы получите одно из решений
 																+icon('fa-arrow-circle-o-down icon-blue')
-															i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
 															p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 													button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 														+icon('fa-print icon-white')

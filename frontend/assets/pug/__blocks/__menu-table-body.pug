@@ -1,8 +1,12 @@
-- var z = 1
+- var z = 2
 span.menu-table__body
+	span.menu-table__body__item
+		span.menu-table__body__link(href='audit.html')
+			+icon('fa-certificate icon-gray')
+			| Регистрация ИП
 	while z <= 6
 		- var value = 'Услуга - ' + z++
 		span.menu-table__body__item
-			span.menu-table__body__link(href='audit-2.html')
+			span.menu-table__body__link(href='audit.html')
 				+icon('fa-certificate icon-gray')
 				= value

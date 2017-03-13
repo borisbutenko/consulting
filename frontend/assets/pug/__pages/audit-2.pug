@@ -16,12 +16,16 @@ block main
 							hr
 			.row
 				.col-md-12.col-sm-12.col-xs-12
-					- var n = 1
+					- var n = 2
 					ul.categories-audit
+						li.categories-audit__item
+							a.categories-audit__link(href='audit.html')
+								+icon('fa-book icon-gray')
+								| Регистрация ИП
 						while n <= 6
 							- var name = 'Категория - ' + n++
 							li.categories-audit__item
-								a.categories-audit__link(href='audit.html')
+								a.categories-audit__link(href='registration-company.html')
 									+icon('fa-book icon-gray')
 									= name
 					- var n = 7
@@ -146,7 +150,7 @@ block main
 										span(data-tooltip-price)
 											h5 Стоимость:
 											| от 30 000 руб.
-										span(data-tooltip-price)
+										span(data-tooltip-term)
 											h5 Срок:
 											| 60 - 90 дней
 										.dop
@@ -154,7 +158,7 @@ block main
 												span Дополнительные услуги
 												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
 											div
-												span(data-tooltip-dop) Клиент получит:
+												span(data-tooltip-cl) Клиент получит:
 													img(src='assets/img/gerb2.png' alt='')
 							.col-md-6.col-sm-6.col-xs-12
 								.aside__right.clearfix
@@ -212,6 +216,8 @@ block main
 							- var cls = ''
 							- var href = '#tab-list-' + t
 							if ( t == 0 )
+								- cls = 'hide'
+							else if ( t == 1 )
 								- cls = 'active'
 							else
 								- cls = ''
@@ -263,7 +269,6 @@ block main
 															a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
 																| В итоге вы получите одно из решений
 																+icon('fa-arrow-circle-o-down icon-blue')
-															i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
 															p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 													button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 														+icon('fa-print icon-white')
@@ -276,11 +281,16 @@ block main
 				.col-md-12.col-sm-12.col-xs-12
 					.swiper-container.services-with
 						ul.swiper-wrapper.services-with__list.categories(role='tablist')
+							li.swiper-slide.services-with__item.categories__item(data-menu-swiper)
+								a.services-with__link.categories__link(href='audit-2.html')
+									+icon('fa-book icon-blue')
+									| Регистрация фирм
+									include ../__blocks/__menu-table-body
 							- var s = 1
-							while s <= 5
+							while s < 5
 								- var service = 'Service name - ' + s++
 								li.swiper-slide.services-with__item.categories__item(data-menu-swiper)
-									a.services-with__link.categories__link(href='audit.html')
+									a.services-with__link.categories__link(href='audit-2.html')
 										+icon('fa-book icon-blue')
 										= service
 										include ../__blocks/__menu-table-body

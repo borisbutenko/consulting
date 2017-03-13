@@ -160,23 +160,10 @@
         /**
          *  Accordion change icon
          */
-        $('#accordion').on('click', '[data-parent]', function() {
-            var target$ = $(this).find('i.fa');
-
-            $('i.fa-minus')
-                .not(target$)
-                .removeClass('fa-minus')
-                .addClass('fa-plus');
-
-            if ( target$.hasClass('fa-plus') ) {
-                target$
-                    .removeClass('fa-plus')
-                    .addClass('fa-minus');
-            } else {
-                target$
-                    .removeClass('fa-minus')
-                    .addClass('fa-plus');
-            }
+        $('.tab-content').on('click', '.panel-heading', function() {
+            $('html, body').animate({
+                scrollTop : getCoords( $(this)[0] ).top - 25
+            }, 300);
         });
 
         /**
@@ -200,18 +187,6 @@
             action(
                 $(window).scrollTop()
             );
-
-            function getCoords(elem) {
-                if ( !$(elem).length ) return false;
-
-                var box = elem.getBoundingClientRect();
-
-                return {
-                    top: box.top + pageYOffset,
-                    left: box.left + pageXOffset
-                };
-
-            }
 
             function action(s) {
                 var tab$   = $('div.tab-pane.in.active');
@@ -240,7 +215,7 @@
                         }, 300);
 
                         action(
-                            $(window).scrollTop()
+                            $(window).scrollTop() - 50
                         );
                     });
 
@@ -260,7 +235,7 @@
                         position    : 'relative',
                         top         : 'unset',
                         bottom      : 'unset',
-                        left        : 'unset'
+                        left        : '0'
                     });
                 }
 
@@ -271,7 +246,7 @@
                             position    : ( target$.height() <= tab$.height() ) ? 'absolute' : 'relative',
                             top         : 'unset',
                             bottom      : 0,
-                            left        : '1.5rem',
+                            left        : 'unset',
                             overflow    : 'hidden'
                         })
                 }
@@ -282,9 +257,49 @@
          * Tooltipster
          */
         (function() {
-            $('[data-tooltip]').tooltipster({
+            $('[data-tooltip-1]').tooltipster({
                 theme           : 'tooltipster-shadow',
-                content         : $('#tooltip-question'),
+                content         : $('#tooltip-service-1'),
+                contentCloning  : true,
+                trigger         : 'click',
+                maxWidth        : 400,
+                side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-2]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-service-2'),
+                contentCloning  : true,
+                trigger         : 'click',
+                maxWidth        : 400,
+                side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-3]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-service-3'),
+                contentCloning  : true,
+                trigger         : 'click',
+                maxWidth        : 400,
+                side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-4]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-service-4'),
+                contentCloning  : true,
+                trigger         : 'click',
+                maxWidth        : 400,
+                side            : 'right',
+                interactive     : true
+            });
+
+            $('[data-tooltip-5]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-service-5'),
                 contentCloning  : true,
                 trigger         : 'click',
                 maxWidth        : 400,
@@ -294,7 +309,27 @@
 
             $('[data-tooltip-info]').tooltipster({
                 theme           : 'tooltipster-shadow',
-                content         : $('#tooltip-question-info'),
+                content         : $('#tooltip-info'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'top',
+                interactive     : true
+            });
+
+            $('[data-tooltip-price]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-price'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'top',
+                interactive     : true
+            });
+
+            $('[data-tooltip-term]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-term'),
                 contentCloning  : true,
                 trigger         : 'click',
                 minWidth        : 300,
@@ -304,17 +339,17 @@
 
             $('[data-tooltip-dop]').tooltipster({
                 theme           : 'tooltipster-shadow',
-                content         : $('#tooltip-question-dop'),
+                content         : $('#tooltip-dop'),
                 contentCloning  : true,
                 trigger         : 'click',
                 minWidth        : 300,
-                side            : 'right',
+                side            : 'top',
                 interactive     : true
             });
 
-            $('[data-tooltip-price]').tooltipster({
+            $('[data-tooltip-cl]').tooltipster({
                 theme           : 'tooltipster-shadow',
-                content         : $('#tooltip-question-price'),
+                content         : $('#tooltip-cl'),
                 contentCloning  : true,
                 trigger         : 'click',
                 minWidth        : 300,
@@ -372,11 +407,34 @@
                 .show();
         });
 
+        $('.menu-table a').mousedown(function(e) {
+            if (e && (e.which == 2 || e.button == 4 )) {
+                e.stopPropagation();
+                return false;
+            }
+        });
+
         $('.menu-table__body__link').on('click', function(e) {
             e.stopPropagation();
             window.location = $(this).attr('href');
             return false;
         });
+
+        $('.menu-table').on('click', '.menu-table__body', function(e) {
+            e.stopPropagation();
+            return false;
+        });
+
+        function getCoords(elem) {
+            if ( !$(elem).length ) return false;
+
+            var box = elem.getBoundingClientRect();
+
+            return {
+                top: box.top + pageYOffset,
+                left: box.left + pageXOffset
+            };
+        }
 
     });
 

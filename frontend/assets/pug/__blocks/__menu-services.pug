@@ -3,8 +3,12 @@ section.section.section__services
 		.row
 			.col-md-12.col-sm-12.col-xs-12
 				ul.services
-					- var n = 0
-					while n < 15
+					li.services__item
+						a.services__link(href='audit-2.html')
+							+icon('fa-users icon-blue')
+							span Регистрация фирм
+					- var n = 2
+					while n <= 15
 						- var text = 'Services - ' + n++
 						li.services__item
 							a.services__link(href='audit-2.html')

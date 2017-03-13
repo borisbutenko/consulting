@@ -1,7 +1,7 @@
 extends ../base
 block main
-	- var bTitle = 'АУДИТ'
-	- var bText  = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat'
+	- var bTitle = 'Регистрация ИП'
+	- var bText  = 'ИП (индивидуальный предприниматель) - это физическое лицо,имеющее законные права на ведение коммерческой деятельности без создания юридического лица (ООО, ЗАО).'
 	- var bPrice = '1000 руб.'
 	include ../__blocks/__price
 	- function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
@@ -12,122 +12,332 @@ block main
 					.main__title
 						+icon('fa-pencil-square-o icon-blue')
 						.title-br
-							h2 АУДИТ
+							h2 Регистрация ИП
 							hr
 			.row
 				.col-md-12.col-sm-12.col-xs-12
 					.swiper-container.audit
 						ul.swiper-wrapper.audit__list(role='tablist')
-							- var n = 0
-								while n < 7
-									- var cl = ''
-									- var href = '#tab-' + n
-									if ( n == 0 )
-										- cl = 'active'
-									else
-										- cl = ''
-									- var name = 'Tab name - ' + n++
-									li.swiper-slide.audit__item(role='presentation' class=cl)
-										a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
+							li.swiper-slide.audit__item.active(role='presentation')
+								a.audit__link(href='#tab-1' aria-controls='home' role='tab' data-toggle='tab') РЕГИСТРАЦИЯ ИП
+							li.swiper-slide.audit__item(role='presentation')
+								a.audit__link(href='#tab-2' aria-controls='home' role='tab' data-toggle='tab') РЕГИСТРАЦИЯ ООО
+							li.swiper-slide.audit__item(role='presentation')
+								a.audit__link(href='#tab-3' aria-controls='home' role='tab' data-toggle='tab') РЕГИСТРАЦИЯ ЗАО
+							//- var n = 0
+							//	while n < 7
+							//		- var cl = ''
+							//		- var href = '#tab-' + n
+							//		if ( n == 0 )
+							//			- cl = 'active'
+							//		else
+							//			- cl = ''
+							//		- var name = 'Tab name - ' + n++
+							//		li.swiper-slide.audit__item(role='presentation' class=cl)
+							//			a.audit__link(href=href aria-controls='home' role='tab' data-toggle='tab')= name
 						.swiper-button-prev.audit__button.audit__button-prev
 						.swiper-button-next.audit__button.audit__button-next
 			.row
 				.tab-content
-					- var n = 0
-					while n < 7
-						if ( n == 0 )
-							- cl = 'in active'
-						else
-							- cl = ''
-						- var id = 'tab-' + n
-						- n++
-						aside.aside.aside-audit.tab-pane.fade.clearfix(id=id role='tabpanel' class=cl)
-							.col-md-6.col-sm-6.col-xs-12
-								.aside__left.clearfix
-									.row
+					//- var n = 0
+					//while n < 7
+					//	if ( n == 0 )
+					//		- cl = 'in active'
+					//	else
+					//		- cl = ''
+					//	- var id = 'tab-' + n
+					//	- n++
+					aside#tab-1.aside.aside-audit.tab-pane.fade.clearfix.in.active(role='tabpanel')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__left.clearfix
+								.row
+									.aside__title
+										h3
+											+icon('fa-newspaper-o icon-gray')
+											| Что мы для вас делаем
+								.row
+									ul#aside-accordion-1.aside-accordion(role='tablist' aria-multiselectable='true')
+										li#aside-accordion-1-li-1.aside-accordion__item(role='tab')
+											+icon('fa-check-circle-o icon-gray')
+											a.aside-accordion__link(href='#aside-accordion-1-collapse-1' role='button' data-toggle='collapse' data-parent='#aside-accordion-1' aria-expanded='false' aria-controls='aside-accordion-1-collapse-1') Помогаем  выбрать  максимальное количество кодов по видам деятельности - 1.
+												+icon('fa-arrow-circle-o-down icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-1)
+											p#aside-accordion-1-collapse-1.collapse(role='tabpanel' aria-labelledby='aside-accordion-1-p-1') Комментарий - 1.
+										li#aside-accordion-1-li-2.aside-accordion__item(role='tab')
+											+icon('fa-check-circle-o icon-gray')
+											a.aside-accordion__link(href='#aside-accordion-1-collapse-2' role='button' data-toggle='collapse' data-parent='#aside-accordion-1' aria-expanded='false' aria-controls='aside-accordion-1-collapse-2') Помогаем  выбрать  максимальное количество кодов по видам деятельности - 2.
+												+icon('fa-arrow-circle-o-down icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-2)
+											p#aside-accordion-1-collapse-2.collapse(role='tabpanel' aria-labelledby='aside-accordion-1-p-2') Комментарий - 2.
+										li#aside-accordion-1-li-3.aside-accordion__item(role='tab')
+											+icon('fa-check-circle-o icon-gray')
+											a.aside-accordion__link(href='#aside-accordion-1-collapse-3' role='button' data-toggle='collapse' data-parent='#aside-accordion-1' aria-expanded='false' aria-controls='aside-accordion-1-collapse-3') Помогаем  выбрать  максимальное количество кодов по видам деятельности - 3.
+												+icon('fa-arrow-circle-o-down icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-3)
+											p#aside-accordion-1-collapse-3.collapse(role='tabpanel' aria-labelledby='aside-accordion-1-p-3') Комментарий - 3.
+										li#aside-accordion-1-li-4.aside-accordion__item(role='tab')
+											+icon('fa-check-circle-o icon-gray')
+											a.aside-accordion__link(href='#aside-accordion-1-collapse-4' role='button' data-toggle='collapse' data-parent='#aside-accordion-1' aria-expanded='false' aria-controls='aside-accordion-1-collapse-4') Помогаем  выбрать  максимальное количество кодов по видам деятельности - 4.
+												+icon('fa-arrow-circle-o-down icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-4)
+											p#aside-accordion-1-collapse-4.collapse(role='tabpanel' aria-labelledby='aside-accordion-1-p-4') Комментарий - 4.
+										li#aside-accordion-1-li-5.aside-accordion__item(role='tab')
+											+icon('fa-check-circle-o icon-gray')
+											a.aside-accordion__link(href='#aside-accordion-1-collapse-5' role='button' data-toggle='collapse' data-parent='#aside-accordion-1' aria-expanded='false' aria-controls='aside-accordion-1-collapse-5') Помогаем  выбрать  максимальное количество кодов по видам деятельности - 5.
+												+icon('fa-arrow-circle-o-down icon-gray')
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip-5)
+											p#aside-accordion-1-collapse-5.collapse(role='tabpanel' aria-labelledby='aside-accordion-1-p-5') Комментарий - 5.
+										//- var a = 0
+										//while a < 10
+										//	- var bn = '-' + getRandomInt(1, 1000)
+										//	- var val  = 'Услуга - ' + a++
+										//	- var liId = 'aside-accordion-' + a + bn
+										//	- var arCr = 'aside-accordion-collapse-' + a + bn
+										//	li.aside-accordion__item(role='tab' id=liId)
+										//		+icon('fa-check-circle-o icon-gray')
+										//		- var href = '#aside-accordion-collapse-' + a + bn
+										//		a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
+										//			+icon('fa-arrow-circle-o-down icon-gray')
+										//		i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+										//		- var pId  = 'aside-accordion-collapse-' + a + bn
+										//		- var arLb = 'aside-accordion-' + a + bn
+										//		p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									span(data-tooltip-price)
+										h5 Стоимость:
+										| от 30 000 руб.
+									span(data-tooltip-term)
+										h5 Срок:
+										| 60 - 90 дней
+									.dop
+										b(data-tooltip-dop)
+											span Дополнительные услуги
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+										div
+											span(data-tooltip-cl) Клиент получит:
+												img(src='assets/img/gerb2.png' alt='')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__right.clearfix
+								.row
+									.col-md-12.col-sm-12.col-xs-12
 										.aside__title
 											h3
 												+icon('fa-newspaper-o icon-gray')
-												| Что мы для вас делаем - #{n}
+												| Что потребуется от вас - #{n}
+								.row
+									.col-md-12.col-sm-12.col-xs-12
+										p.aside__info(data-tooltip-info)
+											span Сведения и документы, которые нам потребуются
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
 									.row
-										ul#aside-accordion.aside-accordion(role='tablist' aria-multiselectable='true')
-											- var a = 0
-											while a < 10
-												- var bn = '-' + getRandomInt(1, 1000)
-												- var val  = 'Услуга - ' + a++
-												- var liId = 'aside-accordion-' + a + bn
-												- var arCr = 'aside-accordion-collapse-' + a + bn
-												li.aside-accordion__item(role='tab' id=liId)
-													+icon('fa-check-circle-o icon-gray')
-													- var href = '#aside-accordion-collapse-' + a + bn
-													a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
-														+icon('fa-arrow-circle-o-down icon-gray')
-													i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
-													- var pId  = 'aside-accordion-collapse-' + a + bn
-													- var arLb = 'aside-accordion-' + a + bn
-													p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
-										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
-										span(data-tooltip-price)
-											h5 Стоимость:
-											| от 30 000 руб.
-										span(data-tooltip-price)
-											h5 Срок:
-											| 60 - 90 дней
-										.dop
-											b(data-tooltip-dop)
-												span Дополнительные услуги
-												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
-											div
-												span(data-tooltip-dop) Клиент получит:
-													img(src='assets/img/gerb2.png' alt='')
-							.col-md-6.col-sm-6.col-xs-12
-								.aside__right.clearfix
-									.row
-										.col-md-12.col-sm-12.col-xs-12
-											.aside__title
-												h3
-													+icon('fa-newspaper-o icon-gray')
-													| Что потребуется от вас - #{n}
-									.row
-										.col-md-12.col-sm-12.col-xs-12
-											p.aside__info(data-tooltip-info)
-												span Сведения и документы, которые нам потребуются
-												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+										.col-md-3.col-sm-3.col-xs-12.text-center.ml3prc
+											+icon('fa-headphones icon-black')
+											h5 Позвоните нам
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-question-circle-o icon-black')
+											h5 Задайте вопрос
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-sticky-note-o icon-black')
+											h5 Получите ответ
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									.aside__callback
 										.row
-											.col-md-3.col-sm-3.col-xs-12.text-center.ml3prc
-												+icon('fa-headphones icon-black')
-												h5 Позвоните нам
-												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
-												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
-											.col-md-3.col-sm-3.col-xs-12.text-center
-												+icon('fa-question-circle-o icon-black')
-												h5 Задайте вопрос
-												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
-												img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
-											.col-md-3.col-sm-3.col-xs-12.text-center
-												+icon('fa-sticky-note-o icon-black')
-												h5 Получите ответ
-												p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										.aside__callback
-											.row
-												.col-md-12.col-sm-12.col-xs-12
-													h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
-											.row
-												.col-md-6.col-sm-12.col-xs-12
-													span.text-input.form-group
-														input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
-														+icon('fa-user icon-gray')
-												.col-md-6.col-sm-12.col-xs-12
-													span.text-input.form-group
-														input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
-														+icon('fa-mobile icon-gray')
-											.row
-												.col-md-8.col-sm-12.col-xs-12
-													p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
-												.col-md-4.col-sm-12.col-xs-12
-													button.btn.btn-primary(type='submit') ОТПРАВИТЬ
+											.col-md-12.col-sm-12.col-xs-12
+												h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+										.row
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+													+icon('fa-user icon-gray')
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+													+icon('fa-mobile icon-gray')
+										.row
+											.col-md-8.col-sm-12.col-xs-12
+												p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+											.col-md-4.col-sm-12.col-xs-12
+												button.btn.btn-primary(type='submit') ОТПРАВИТЬ
+					aside#tab-2.aside.aside-audit.tab-pane.fade.clearfix(role='tabpanel')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__left.clearfix
+								.row
+									.aside__title
+										h3
+											+icon('fa-newspaper-o icon-gray')
+											| Что мы для вас делаем - #{n}
+								.row
+									ul#aside-accordion-2.aside-accordion(role='tablist' aria-multiselectable='true')
+										- var a = 0
+										while a < 10
+											- var bn = '-' + getRandomInt(1, 1000)
+											- var val  = 'Услуга - ' + a++
+											- var liId = 'aside-accordion-' + a + bn
+											- var arCr = 'aside-accordion-collapse-' + a + bn
+											li.aside-accordion__item(role='tab' id=liId)
+												+icon('fa-check-circle-o icon-gray')
+												- var href = '#aside-accordion-collapse-' + a + bn
+												a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
+												+icon('fa-arrow-circle-o-down icon-gray')
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+												- var pId  = 'aside-accordion-collapse-' + a + bn
+												- var arLb = 'aside-accordion-' + a + bn
+												p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									span(data-tooltip-price)
+										h5 Стоимость:
+										| от 30 000 руб.
+									span(data-tooltip-term)
+										h5 Срок:
+										| 60 - 90 дней
+									.dop
+										b(data-tooltip-dop)
+											span Дополнительные услуги
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+										div
+											span(data-tooltip-cl) Клиент получит:
+												img(src='assets/img/gerb2.png' alt='')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__right.clearfix
+								.row
+									.col-md-12.col-sm-12.col-xs-12
+										.aside__title
+											h3
+												+icon('fa-newspaper-o icon-gray')
+												| Что потребуется от вас - #{n}
+								.row
+									.col-md-12.col-sm-12.col-xs-12
+										p.aside__info(data-tooltip-info)
+											span Сведения и документы, которые нам потребуются
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+									.row
+										.col-md-3.col-sm-3.col-xs-12.text-center.ml3prc
+											+icon('fa-headphones icon-black')
+											h5 Позвоните нам
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-question-circle-o icon-black')
+											h5 Задайте вопрос
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-sticky-note-o icon-black')
+											h5 Получите ответ
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									.aside__callback
+										.row
+											.col-md-12.col-sm-12.col-xs-12
+												h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+										.row
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+													+icon('fa-user icon-gray')
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+													+icon('fa-mobile icon-gray')
+										.row
+											.col-md-8.col-sm-12.col-xs-12
+												p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+											.col-md-4.col-sm-12.col-xs-12
+												button.btn.btn-primary(type='submit') ОТПРАВИТЬ
+					aside#tab-3.aside.aside-audit.tab-pane.fade.clearfix(role='tabpanel')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__left.clearfix
+								.row
+									.aside__title
+										h3
+											+icon('fa-newspaper-o icon-gray')
+											| Что мы для вас делаем - #{n}
+								.row
+									ul#aside-accordion-3.aside-accordion(role='tablist' aria-multiselectable='true')
+										- var a = 0
+										while a < 10
+											- var bn = '-' + getRandomInt(1, 1000)
+											- var val  = 'Услуга - ' + a++
+											- var liId = 'aside-accordion-' + a + bn
+											- var arCr = 'aside-accordion-collapse-' + a + bn
+											li.aside-accordion__item(role='tab' id=liId)
+												+icon('fa-check-circle-o icon-gray')
+												- var href = '#aside-accordion-collapse-' + a + bn
+												a.aside-accordion__link(href=href role='button' data-toggle='collapse' data-parent='#aside-accordion' aria-expanded='false' aria-controls=arCr)= val
+												+icon('fa-arrow-circle-o-down icon-gray')
+												i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+												- var pId  = 'aside-accordion-collapse-' + a + bn
+												- var arLb = 'aside-accordion-' + a + bn
+												p.collapse(id=pId role='tabpanel' aria-labelledby=arLb) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+									span(data-tooltip-price)
+										h5 Стоимость:
+										| от 30 000 руб.
+									span(data-tooltip-term)
+										h5 Срок:
+										| 60 - 90 дней
+									.dop
+										b(data-tooltip-dop)
+											span Дополнительные услуги
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+										div
+											span(data-tooltip-cl) Клиент получит:
+												img(src='assets/img/gerb2.png' alt='')
+						.col-md-6.col-sm-6.col-xs-12
+							.aside__right.clearfix
+								.row
+									.col-md-12.col-sm-12.col-xs-12
+										.aside__title
+											h3
+												+icon('fa-newspaper-o icon-gray')
+												| Что потребуется от вас - #{n}
+								.row
+									.col-md-12.col-sm-12.col-xs-12
+										p.aside__info(data-tooltip-info)
+											span Сведения и документы, которые нам потребуются
+											i.fa.fa-question-circle-o.icon-gray(aria-hidden='true')
+									.row
+										.col-md-3.col-sm-3.col-xs-12.text-center.ml3prc
+											+icon('fa-headphones icon-black')
+											h5 Позвоните нам
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-question-circle-o icon-black')
+											h5 Задайте вопрос
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										.col-md-1.col-sm-1.hidden-xs.text-center.pos-r
+											img.arrow-next-step(src='assets/img/arrow-right.png' alt='')
+										.col-md-3.col-sm-3.col-xs-12.text-center
+											+icon('fa-sticky-note-o icon-black')
+											h5 Получите ответ
+											p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+									.aside__callback
+										.row
+											.col-md-12.col-sm-12.col-xs-12
+												h2 Получи бесплатную консультацию специалиста, который имеет практику именно в вашем вопросе.
+										.row
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='text' name='name' placeholder='Ваше имя')
+													+icon('fa-user icon-gray')
+											.col-md-6.col-sm-12.col-xs-12
+												span.text-input.form-group
+													input.form-control.input.input-icon(type='phone' name='phone' placeholder='+7 (___) ___ - __ - __')
+													+icon('fa-mobile icon-gray')
+										.row
+											.col-md-8.col-sm-12.col-xs-12
+												p.text-gerb В соответствии с Федеральным законом РФ от 27.07.2006 г. №152 "О персональных данных" - мы гарантируем полную конфиденциальность.
+											.col-md-4.col-sm-12.col-xs-12
+												button.btn.btn-primary(type='submit') ОТПРАВИТЬ
 			.row.hidden-xs.mt-4
 				.col-md-12.col-sm-12.col-xs-12
 					.title-br
@@ -142,103 +352,202 @@ block main
 							.swiper-slide
 								.restuct
 									+icon('fa-files-o icon-gray')
-									p Предоставление копий документов
+									p Форма Р21001
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-pencil-square-o icon-gray')
-									p Подготовка документов
+									p Оплата госпошлины
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-check-circle-o icon-gray')
-									p Заверенные формы у нотариуса
+									p Берем ИНН и паспорт, делаем с них копии
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-credit-card icon-gray')
-									p Оплата услуг
+									p Несем документы в ИФНС
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-files-o icon-gray')
-									p Предоставление копий документов
+									p Заверить доверенность у нотариус
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-pencil-square-o icon-gray')
-									p Подготовка документов
+									p Оплачиваем госпошлину и услуги по регистрации
 									img(src='assets/img/arrow-right.png' alt='')
 							.swiper-slide
 								.restuct
 									+icon('fa-check-circle-o icon-gray')
-									p Заверенные формы у нотариуса
+									p Через 5 забираем документы о регистрации
 						.swiper-button-prev.services-with__button.services-with__button-prev
 						.swiper-button-next.services-with__button.services-with__button-next
 			.row.mt-8.data-order
 				.col-md-4.col-sm-6.col-xs-12.data-order-last
 					ul.tab-list(role='tablist')
-						- var t = 0
-						while t < 7
-							- var cls = ''
-							- var href = '#tab-list-' + t
-							if ( t == 0 )
-								- cls = 'active'
-							else
-								- cls = ''
-							- t++
-							- var name = 'Tab name - ' + t
-							li.tab-list__item(role='presentation' class=cls)
-								a.tab-list__link(href=href aria-controls='home' role='tab' data-toggle='tab')
-									+icon('fa-child icon-gray')
-									= name
+						li.tab-list__item.active(role='presentation')
+							a.tab-list__link(href='#tab-list-1' aria-controls='home' role='tab' data-toggle='tab')
+								+icon('fa-child icon-gray')
+								| РЕГИСТРАЦИЯ ИП
+						li.tab-list__item(role='presentation')
+							a.tab-list__link(href='#tab-list-2' aria-controls='home' role='tab' data-toggle='tab')
+								+icon('fa-child icon-gray')
+								| РЕГИСТРАЦИЯ ООО
+						li.tab-list__item(role='presentation')
+							a.tab-list__link(href='#tab-list-3' aria-controls='home' role='tab' data-toggle='tab')
+								+icon('fa-child icon-gray')
+								| РЕГИСТРАЦИЯ ЗАО
+						//- var t = 0
+						//while t < 7
+						//	- var cls = ''
+						//	- var href = '#tab-list-' + t
+						//	if ( t == 0 )
+						//		- cls = 'active'
+						//	else
+						//		- cls = ''
+						//	- t++
+						//	- var name = 'Tab name - ' + t
+						//	li.tab-list__item(role='presentation' class=cls)
+						//		a.tab-list__link(href=href aria-controls='home' role='tab' data-toggle='tab')
+						//			+icon('fa-child icon-gray')
+						//			= name
 				.col-md-8.col-sm-6.col-xs-12.data-order-first
 					.tab-content
-						- var t = 0
-						while t < 7
-							- var ids = 'tab-list-' + t
-							- var cls = ''
-							if ( t == 0 )
-								- cls = 'in active'
-							else
-								- cls = ''
-							- t++
-							.tab-pane.fade(id=ids role='tabpanel' class=cls)
-								#accordion.panel-group(role='tablist' aria-multiselectable='true')
-									h4 РЕСТРУКТУРИЗАЦИЯ ФИРМЫ: ОПИСАНИЕ УСЛУГ
-									p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									- var a = 0
-									while a < 4
-										- var b = '-' + getRandomInt(1, 1000)
-										- a++
-										- var ida  = 'tab-list-accordion-'  + a + b
-										- var idh  = 'tab-list-collapse-'   + a + b
-										- var hr   = '#tab-list-collapse-'  + a + b
-										- var name = 'Tab item - '          + a
-										.panel.panel-default
-											.panel-heading(id=ida role='tab')
-												a(href=hr role='button' data-toggle='collapse' data-parent='#accordion' aria-expanded='false' aria-controls=idh)
-													+icon('fa-plus icon-gray')
-													span= name
-											.panel-collapse.collapse(id=idh role='tabpanel' aria-labelledby=ida)
-												.panel-body
-													ol
-														li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-														li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
-														li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-													div#result-accordion(aria-multiselectable='false' role='tablist')
-														- var idr = 'result-accordion-' + getRandomInt(1, 1000)
-														- var idc = 'result-collapse-' + getRandomInt(1, 1000)
-														- var hdr = '#' + idc
-														div(id=idr role='tab')
-															a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
-																| В итоге вы получите одно из решений
-																+icon('fa-arrow-circle-o-down icon-blue')
-															i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
-															p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-													button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
-														+icon('fa-print icon-white')
-														| Распечатать
+						#tab-list-1.tab-pane.fade.in.active(role='tabpanel')
+							#accordion-1.panel-group(role='tablist' aria-multiselectable='true')
+								h4 РЕГИСТРАЦИЯ ИП: ОПИСАНИЕ УСЛУГ
+								p ИП (индивидуальный предприниматель) - это физическое лицо,имеющее законные права на ведение коммерческой деятельности без создания юридического лица (ООО, ЗАО).
+								.panel.panel-default
+									#tab-list-accordion-1.panel-heading(role='tab')
+										a(href='#tab-list-collapse-1' role='button' data-toggle='collapse' data-parent='#accordion-1' aria-expanded='false' aria-controls='tab-list-collapse-1')
+											+icon('fa-plus icon-gray')
+											span Планируете открыть собственное дело, но не знаете с чего начать?
+									#tab-list-collapse-1.panel-collapse.collapse(role='tabpanel' aria-labelledby='tab-list-accordion-1')
+										.panel-body
+											p.bordered.bordered-red В ConsultingGroup сделать это проще простого! Мы знаем всё о: преимуществах и недостатках ИП; нюансах процесса регистрации; особенностях налогообложения; От вас требуется только одно – позвонить нам! А дальше мы все сделаем сами: возьмем на себя все проблемы, связанные с регистрацией и оформлением документов, поможем выбрать оптимальную систему налогообложения, покажем, как оформить бухгалтерские отчеты!
+											p.bordered.bordered-gray Вам не нужно: терять время в поиске нужной информации! детально разбираться во всей документации! сидеть в очередях! А что же тогда нужно? Получить пакет документов от ConsultingGroup и спокойно работать! ConsultingGroup – хорошее дело начните вместе с нами!
+											ul
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											div#result-accordion-1(aria-multiselectable='false' role='tablist')
+												div#result-accordion-container-1(role='tab')
+													a#result-accordion-1-a-1(href='#result-collapse-1' data-parent='#result-accordion-1' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-1')
+														| В итоге вы получите одно из решений
+														+icon('fa-arrow-circle-o-down icon-blue')
+													p.bordered.bordered-gray#result-collapse-1.collapse(role='tabpanel' aria-labelledby='result-accordion-1') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
+												+icon('fa-print icon-white')
+												| Распечатать
+								.panel.panel-default
+									#tab-list-accordion-2.panel-heading(role='tab')
+										a(href='#tab-list-collapse-2' role='button' data-toggle='collapse' data-parent='#accordion-2' aria-expanded='false' aria-controls='tab-list-collapse-2')
+											+icon('fa-plus icon-gray')
+											span Как происходит регистрация фирм?
+									#tab-list-collapse-2.panel-collapse.collapse(role='tabpanel' aria-labelledby='tab-list-accordion-2')
+										.panel-body
+											p.bordered.bordered-red Порядок государственной регистрации регулируется Федеральным Законом "О государственной регистрации юридических лиц и индивидуальных предпринимателей" Чтобы успешно зарегистрироваться как индивидуальному предпринимателю нужно пройти пять основных этапов: заявление о государственной регистрации физического лица в качестве индивидуального предпринимателя по форме P21001.
+											p.bordered.bordered-gray Соберите пакет документов на регистрацию ИП: ИНН (если отсутствует – подаете заявление на его получение в ИФНС по месту прописки. Место рождения - полностью, как записано в паспорте. Адрес - по месту регистрации (как в паспорте) Почтовый индекс можно узнать на странице сайта "Почты России" Код вида документа - для паспорта гражданина РФ - 21 (проверьте актуальность в сведениях о видах документов) Как заполняется Лист А (Сведения о кодах по ОКВЭД) Вы можете прочитать на странице посвященной кодам ОКВЭД для ИП.
+											ul
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											p.bordered.bordered-gray Лист Б нужно распечатать в 2-х экземплярах. квитанция на оплату госпошлины за регистрацию ИП, заявление о переходе на упрощенную систему налогообложения по форме № 26.2-1 (опционально), копия паспорта. Пройдите регистрацию ИП в ИФНС  Пройдите регистрацию ИП в ПФР и ФСС (если есть наемные работники, работающие по трудовому договору) Изготовление печати (Печать для индивидуального предпринимателя) Открытие расчетного счета в банке. Самый простой способ регистрации ИП - это онлайн-регистрация на сайте ФНС РФ. При использовании этого сервиса вы можете использовать информацию, изложенную в вышеуказанных пяти пунктах.
+											div#result-accordion-2(aria-multiselectable='false' role='tablist')
+												div#result-accordion-container-2(role='tab')
+													a#result-accordion-2-a-2(href='#result-collapse-2' data-parent='#result-accordion-2' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-2')
+														| В итоге вы получите одно из решений
+														+icon('fa-arrow-circle-o-down icon-blue')
+													p.bordered.bordered-gray#result-collapse-2.collapse(role='tabpanel' aria-labelledby='result-accordion-2') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
+												+icon('fa-print icon-white')
+												| Распечатать
+								.panel.panel-default
+									#tab-list-accordion-3.panel-heading(role='tab')
+										a(href='#tab-list-collapse-3' role='button' data-toggle='collapse' data-parent='#accordion-3' aria-expanded='false' aria-controls='tab-list-collapse-3')
+											+icon('fa-plus icon-gray')
+											span Регистрация ИП
+									#tab-list-collapse-3.panel-collapse.collapse(role='tabpanel' aria-labelledby='tab-list-accordion-3')
+										.panel-body
+											p.bordered.bordered-red ИП – или Индивидуальный предприниматель – физическое лицо, имеющее право на осуществление хозяйственных операций и коммерческой деятельности в согласовании с законом и прошедшее регистрацию в установленном законом порядке. Уникальность ИП такова, что вам не потребуется становиться юридическим лицом для осуществления задуманной индивидуальной деятельности, проще говоря, своего бизнеса. Данный формат регистрации бизнеса идеально подойдет вам, если вы не планируете привлекать широкие объемы кредитования для своей деятельности в банках, других кредитно-финансовых учреждениях или сторонних источниках.
+											p.bordered.bordered-gray Если же вы ведете деятельность, связанную с повышенными рисками, то актуальней для вас будет возможность создания ООО физическим лицом. Говоря о величине издержек, которые вы вынуждены будете понести в процессе самостоятельного процесса регистрации ИП, следует отметить базовую госпошлину за государственную регистрацию ИП в размере 800 рублей. Также вы столкнетесь с необходимостью распечатывать большие объемы документов, что также может сократить ваш кошелек на размер, эквивалентный диапазону от 450 до 1200 рублей.
+											ul
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+												li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											p.bordered.bordered-red Возможны расходы по открытию расчетного счета в банке. Последние могут составлять сумму до 2000 рублей. Таким образом, усредненная стоимость самостоятельной регистрации ИП будет равняться сумме в 1400 рублей. Ниже мы приведем 12 обязательных пунктов, которые необходимо преодолеть в процессе самостоятельной регистрации ИП: Выбор способа регистрации Индивидуального Предпринимателя; Выбор имени для своего ИП; Определение регистрационного места ИП; Определение кодов предпринимательской деятельности из классификатора; Написание регистрационного заявления ИП согласно форме Р21001;
+											p.bordered.bordered-gray Оплата государственной пошлины; Подбор системы уплаты налогов; Поиск регистрирующего органа по месту проживания Индивидуального Предпринимателя; Определение и сбор полученных документов, квитанций и копий; Подпись документов в бумажном виде (не актуально, если вы проходите электронную регистрацию); Написание и заверение доверенности для работы с документами (в случае необходимости); Окончательная проверка регистрационного пакета и подача в соответственный орган. После позитивного результата, вам останется проделать последние процедуры, среди которых: Постановка на учет как работодателя (если собираетесь нанимать кого-либо); Получение кодов статистики; Изготовление печати; Открытие расчетного счета; Официальный прием на работу сотрудников (если наняли кого-либо); Процесс получения лицензии, если последняя необходима для осуществления деятельности; Приобретение кассового аппарата (если необходим); Организация бухгалтерского учета ИП.
+											div#result-accordion-3(aria-multiselectable='false' role='tablist')
+												div#result-accordion-container-3(role='tab')
+													a#result-accordion-3-a-3(href='#result-collapse-3' data-parent='#result-accordion-3' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-3')
+														| В итоге вы получите одно из решений
+														+icon('fa-arrow-circle-o-down icon-blue')
+													p.bordered.bordered-gray#result-collapse-3.collapse(role='tabpanel' aria-labelledby='result-accordion-3') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
+												+icon('fa-print icon-white')
+												| Распечатать
+						#tab-list-2.tab-pane.fade(role='tabpanel')
+							#accordion-2.panel-group(role='tablist' aria-multiselectable='true')
+								h4 РЕГИСТРАЦИЯ ООО: ОПИСАНИЕ УСЛУГ
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						#tab-list-3.tab-pane.fade(role='tabpanel')
+							#accordion-3.panel-group(role='tablist' aria-multiselectable='true')
+								h4 РЕГИСТРАЦИЯ ЗАО: ОПИСАНИЕ УСЛУГ
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//- var t = 0
+						//while t < 7
+						//	- var ids = 'tab-list-' + t
+						//	- var cls = ''
+						//	if ( t == 0 )
+						//		- cls = 'in active'
+						//	else
+						//		- cls = ''
+						//	- t++
+						//	.tab-pane.fade(id=ids role='tabpanel' class=cls)
+						//		#accordion.panel-group(role='tablist' aria-multiselectable='true')
+						//			h4 РЕСТРУКТУРИЗАЦИЯ ФИРМЫ: ОПИСАНИЕ УСЛУГ
+						//			p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//			- var a = 0
+						//			while a < 4
+						//				- var b = '-' + getRandomInt(1, 1000)
+						//				- a++
+						//				- var ida  = 'tab-list-accordion-'  + a + b
+						//				- var idh  = 'tab-list-collapse-'   + a + b
+						//				- var hr   = '#tab-list-collapse-'  + a + b
+						//				- var name = 'Tab item - '          + a
+						//				.panel.panel-default
+						//					.panel-heading(id=ida role='tab')
+						//						a(href=hr role='button' data-toggle='collapse' data-parent='#accordion' aria-expanded='false' aria-controls=idh)
+						//							+icon('fa-plus icon-gray')
+						//							span= name
+						//					.panel-collapse.collapse(id=idh role='tabpanel' aria-labelledby=ida)
+						//						.panel-body
+						//							ol
+						//								li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//								li Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.consequat
+						//								li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//							div#result-accordion(aria-multiselectable='false' role='tablist')
+						//								- var idr = 'result-accordion-' + getRandomInt(1, 1000)
+						//								- var idc = 'result-collapse-' + getRandomInt(1, 1000)
+						//								- var hdr = '#' + idc
+						//								div(id=idr role='tab')
+						//									a(id=idr href=hdr data-parent='#result-accordion' role='button' data-toggle='collapse' aria-expanded='false' aria-controls=idc)
+						//										| В итоге вы получите одно из решений
+						//										+icon('fa-arrow-circle-o-down icon-blue')
+						//									i.fa.fa-question-circle-o.icon-gray(aria-hidden='true' data-tooltip)
+						//									p.collapse(id=idc role='tabpanel' aria-labelledby=idr) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						//							button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
+						//								+icon('fa-print icon-white')
+						//								| Распечатать
 			.row.mt-4
 				.col-md-12.col-sm-12.col-xs-12
 					.title-br
@@ -247,11 +556,16 @@ block main
 				.col-md-12.col-sm-12.col-xs-12
 					.swiper-container.services-with
 						ul.swiper-wrapper.services-with__list.categories(role='tablist')
-							- var s = 0
+							li.swiper-slide.services-with__item.categories__item(data-menu-swiper)
+								a.services-with__link.categories__link(href='audit-2.html')
+									+icon('fa-book icon-blue')
+									| Регистрация фирм
+									include ../__blocks/__menu-table-body
+							- var s = 1
 							while s < 5
 								- var service = 'Service name - ' + s++
 								li.swiper-slide.services-with__item.categories__item(data-menu-swiper)
-									a.services-with__link.categories__link(href='audit.html')
+									a.services-with__link.categories__link(href='audit-2.html')
 										+icon('fa-book icon-blue')
 										= service
 										include ../__blocks/__menu-table-body
