@@ -10359,6 +10359,38 @@ template {
   color: #fff;
   margin-right: 1rem;
 }
+.menu-table > tbody button {
+  background: #3393ce;
+  border: none;
+  width: 16rem !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.menu-table > tbody button b {
+  display: inline-block;
+  float: left;
+  font-weight: 500;
+  padding: 0 !important;
+  padding-left: 1rem !important;
+  line-height: 2.5rem;
+}
+.menu-table > tbody button b:hover {
+  background: #3393ce !important;
+}
+.menu-table > tbody button i.fa {
+  float: right;
+  margin: 0;
+  line-height: 1.6rem;
+  background: #fff;
+  color: #3393ce !important;
+  width: 2rem;
+  position: relative;
+  left: 0.5rem;
+}
+.menu-table > tbody button i.fa:hover {
+  background: #fff !important;
+}
 .section__audit .tab-content {
   margin-bottom: 4rem;
   padding: 0 2rem;
@@ -10673,6 +10705,39 @@ template {
   .services-with__button-next {
     right: 0.5rem;
   }
+}
+.services-with .menu-table__body button {
+  background: #3393ce;
+  border: none;
+  width: 16rem !important;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.services-with .menu-table__body button b {
+  display: inline-block;
+  float: left;
+  font-weight: 500;
+  padding: 0 !important;
+  padding-left: 1rem !important;
+  line-height: 2.5rem;
+}
+.services-with .menu-table__body button b:hover {
+  background: #3393ce !important;
+}
+.services-with .menu-table__body button i.fa {
+  font-size: 1.6rem !important;
+  float: right;
+  margin: 0;
+  line-height: 1.6rem;
+  background: #fff;
+  color: #3393ce !important;
+  width: 2.5rem;
+  position: relative;
+  left: 0.5rem;
+}
+.services-with .menu-table__body button i.fa:hover {
+  background: #fff !important;
 }
 .aside-accordion {
   max-height: 20rem;

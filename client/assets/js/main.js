@@ -445,6 +445,12 @@
             }
         });
 
+        $('.all-services').on('click', function(e) {
+            e.stopPropagation();
+            window.location = $(this).data('href');
+            return false;
+        });
+
         function getCoords(elem) {
             if ( !$(elem).length ) return false;
 
