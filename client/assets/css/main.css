@@ -10699,6 +10699,7 @@ template {
   padding: 0 2rem;
 }
 .aside-accordion__link {
+  padding-right: 1.5rem;
   position: relative;
   max-width: 85%;
   color: #333;
