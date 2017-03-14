@@ -185,6 +185,7 @@
       background: rgba(0, 121, 194, .8)
       color: #fff
   &__button
+    top: 38%
     &-prev
       left: 0
       @media (max-width: 768px)
@@ -249,12 +250,17 @@
       margin-top: .2rem
     & p
       padding: 0 2rem
-      padding-top: 1rem
   &__link
+    position: relative
     max-width: 85%
     color: #333
     display: inline-block
     margin: 0 1rem
+    margin-bottom: 1rem
+    & > i.fa
+      position: absolute;
+      top: .15rem;
+      right: -.5rem;
     & + i.fa
       vertical-align: top
       margin-top: .2rem
@@ -438,7 +444,9 @@
       display: inline-block
       margin: 2rem 0 .5rem
       & > i.fa
+        cursor: pointer
         margin-left: .5rem
+        margin-right: .5rem
     & .bordered
       padding: 1rem;
       padding-left: 2rem;

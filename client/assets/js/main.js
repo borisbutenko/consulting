@@ -356,6 +356,16 @@
                 side            : 'top',
                 interactive     : true
             });
+
+            $('[data-tooltip-dec]').tooltipster({
+                theme           : 'tooltipster-shadow',
+                content         : $('#tooltip-dec-1'),
+                contentCloning  : true,
+                trigger         : 'click',
+                minWidth        : 300,
+                side            : 'top',
+                interactive     : true
+            });
         })();
 
         $('.menu-table td > a').hover(function() {
@@ -423,6 +433,16 @@
         $('.menu-table').on('click', '.menu-table__body', function(e) {
             e.stopPropagation();
             return false;
+        });
+
+        $('.tab-list__link').on('click', function() {
+            console.log('here', window.innerWidth)
+            if ( window.innerWidth <= 767 ) {
+                console.log('here');
+                $('html, body').animate({
+                    scrollTop : getCoords( $('[data-tab-list]')[0] ).top - 25
+                }, 300);
+            }
         });
 
         function getCoords(elem) {

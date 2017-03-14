@@ -415,7 +415,7 @@ block main
 						//			+icon('fa-child icon-gray')
 						//			= name
 				.col-md-8.col-sm-6.col-xs-12.data-order-first
-					.tab-content
+					.tab-content(data-tab-list)
 						#tab-list-1.tab-pane.fade.in.active(role='tabpanel')
 							#accordion-1.panel-group(role='tablist' aria-multiselectable='true')
 								h4 РЕГИСТРАЦИЯ ИП: ОПИСАНИЕ УСЛУГ
@@ -440,7 +440,8 @@ block main
 													a#result-accordion-1-a-1(href='#result-collapse-1' data-parent='#result-accordion-1' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-1')
 														| В итоге вы получите одно из решений
 														+icon('fa-arrow-circle-o-down icon-blue')
-													p.bordered.bordered-gray#result-collapse-1.collapse(role='tabpanel' aria-labelledby='result-accordion-1') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													i(class='fa fa-question-circle-o icon-blue' data-tooltip-dec)
+													p#result-collapse-1.collapse(role='tabpanel' aria-labelledby='result-accordion-1' style="padding-left: 5rem;") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 												+icon('fa-print icon-white')
 												| Распечатать
@@ -465,7 +466,8 @@ block main
 													a#result-accordion-2-a-2(href='#result-collapse-2' data-parent='#result-accordion-2' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-2')
 														| В итоге вы получите одно из решений
 														+icon('fa-arrow-circle-o-down icon-blue')
-													p.bordered.bordered-gray#result-collapse-2.collapse(role='tabpanel' aria-labelledby='result-accordion-2') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													i(class='fa fa-question-circle-o icon-blue' data-tooltip-dec)
+													p#result-collapse-2.collapse(style="padding-left: 5rem;" role='tabpanel' aria-labelledby='result-accordion-2') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 												+icon('fa-print icon-white')
 												| Распечатать
@@ -491,7 +493,8 @@ block main
 													a#result-accordion-3-a-3(href='#result-collapse-3' data-parent='#result-accordion-3' role='button' data-toggle='collapse' aria-expanded='false' aria-controls='result-collapse-3')
 														| В итоге вы получите одно из решений
 														+icon('fa-arrow-circle-o-down icon-blue')
-													p.bordered.bordered-gray#result-collapse-3.collapse(role='tabpanel' aria-labelledby='result-accordion-3') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+													i(class='fa fa-question-circle-o icon-blue' data-tooltip-dec)
+													p#result-collapse-3.collapse(style="padding-left: 5rem;" role='tabpanel' aria-labelledby='result-accordion-3') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 											button.btn.btn-default.btn-print.pull-right.clearfix(type='button')
 												+icon('fa-print icon-white')
 												| Распечатать

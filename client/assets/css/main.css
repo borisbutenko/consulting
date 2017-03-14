@@ -10095,6 +10095,27 @@ template {
 #tooltip-cl ul li i.fa {
   margin-right: 0.5rem;
 }
+[id*=tooltip-dec] ul {
+  max-width: 30rem;
+  max-height: 20rem;
+  overflow: auto;
+}
+[id*=tooltip-dec] ul::-webkit-scrollbar {
+  width: 0.5rem;
+}
+[id*=tooltip-dec] ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.6rem rgba(0,0,0,0.3);
+}
+[id*=tooltip-dec] ul::-webkit-scrollbar-thumb {
+  background-color: #3393ce;
+  outline: 0.1rem solid #708090;
+}
+[id*=tooltip-dec] ul li {
+  padding: 1rem 0;
+}
+[id*=tooltip-dec] ul li i.fa {
+  margin-right: 0.5rem;
+}
 .section__catalog {
   padding: 4rem 0;
 }
@@ -10578,6 +10599,9 @@ template {
   background: rgba(0,121,194,0.8);
   color: #fff;
 }
+.audit__button {
+  top: 38%;
+}
 .audit__button-prev {
   left: 0;
 }
@@ -10673,13 +10697,19 @@ template {
 }
 .aside-accordion__item p {
   padding: 0 2rem;
-  padding-top: 1rem;
 }
 .aside-accordion__link {
+  position: relative;
   max-width: 85%;
   color: #333;
   display: inline-block;
   margin: 0 1rem;
+  margin-bottom: 1rem;
+}
+.aside-accordion__link > i.fa {
+  position: absolute;
+  top: 0.15rem;
+  right: -0.5rem;
 }
 .aside-accordion__link + i.fa {
   vertical-align: top;
@@ -10901,7 +10931,9 @@ template {
   margin: 2rem 0 0.5rem;
 }
 .panel-group .panel [aria-multiselectable] [data-parent] > i.fa {
+  cursor: pointer;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .panel-group .panel .bordered {
   padding: 1rem;
